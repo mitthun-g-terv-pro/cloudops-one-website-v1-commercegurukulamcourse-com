@@ -1,8 +1,59 @@
+import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Zap, CheckCircle2, ShieldCheck, Sparkles, Award, TrendingUp, BookOpen, Clock } from 'lucide-react';
+import { ArrowRight, Zap, CheckCircle2, ShieldCheck, Sparkles, Play, Pause, Volume2, VolumeX } from 'lucide-react';
 import { heroStats } from '../data/content';
 
 export default function Hero({ onApplyClick, onExploreCourses }) {
+  const textVideoRef = useRef(null);
+  const sideVideoRef = useRef(null);
+  
+  const [isTextVideoPlaying, setIsTextVideoPlaying] = useState(false);
+  const [isSideVideoPlaying, setIsSideVideoPlaying] = useState(false);
+  const [isSideMuted, setIsSideMuted] = useState(true);
+
+  // Hover handlers for the text block video
+  const handleTextHoverEnter = () => {
+    setIsTextVideoPlaying(true);
+    if (textVideoRef.current) {
+      textVideoRef.current.play().catch(err => {
+        console.log('Text video play error:', err);
+      });
+    }
+  };
+
+  const handleTextHoverLeave = () => {
+    if (textVideoRef.current) {
+      textVideoRef.current.pause();
+      setIsTextVideoPlaying(false);
+    }
+  };
+
+  // Hover handlers for side card video
+  const handleSideMouseEnter = () => {
+    if (sideVideoRef.current) {
+      sideVideoRef.current.play().then(() => {
+        setIsSideVideoPlaying(true);
+      }).catch(err => {
+        console.log('Side video play error:', err);
+      });
+    }
+  };
+
+  const handleSideMouseLeave = () => {
+    if (sideVideoRef.current) {
+      sideVideoRef.current.pause();
+      setIsSideVideoPlaying(false);
+    }
+  };
+
+  const toggleSideSound = (e) => {
+    e.stopPropagation();
+    if (sideVideoRef.current) {
+      sideVideoRef.current.muted = !isSideMuted;
+      setIsSideMuted(!isSideMuted);
+    }
+  };
+
   return (
     <section className="relative overflow-hidden pt-10 pb-20">
       {/* Background radial glow */}
@@ -18,13 +69,9 @@ export default function Hero({ onApplyClick, onExploreCourses }) {
             <div className="mb-6 inline-flex flex-wrap items-center gap-2 rounded-full border border-amber-400/40 bg-amber-500/10 px-4 py-1.5 text-xs font-bold text-amber-300 shadow-[0_0_20px_rgba(245,158,11,0.2)]">
               <span className="flex h-2 w-2 relative">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-400"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
               </span>
-              <span>🎓 FOR COLLEGE STUDENTS & COMMERCE GRADUATES</span>
-              <span className="text-amber-400/50">|</span>
-              <span className="text-emerald-300 font-extrabold flex items-center gap-1">
-                <Clock size={12} /> 30-DAY & FASTTRACK COURSES
-              </span>
+              <span>🔥 ADMISSIONS OPEN FOR NEXT 30-DAY COHORT</span>
             </div>
 
             {/* Main Headline */}
@@ -37,25 +84,70 @@ export default function Hero({ onApplyClick, onExploreCourses }) {
               </span>
             </h1>
 
-            {/* Mind-Manipulating Subheadline */}
-            <p className="mt-6 max-w-2xl text-slate-300 text-base sm:text-lg leading-relaxed">
-              Why do 90% of commerce graduates struggle in entry-level interviews? Because colleges teach outdated 2008 textbooks. <strong className="text-amber-300">Commerce Gurukulam</strong> gives you live corporate mastery in <strong className="text-emerald-300">GST filing, Tally Prime, Excel Financial Modeling & Stock Markets</strong> in just 30 days or FastTrack 7 days!
-            </p>
+            {/* HOVER-TO-PLAY VIDEO CONTAINER AROUND TEXT & BULLETS */}
+            <div 
+              onMouseEnter={handleTextHoverEnter}
+              onMouseLeave={handleTextHoverLeave}
+              className="mt-6 rounded-3xl border border-amber-400/30 bg-slate-900/60 p-6 transition-all duration-500 hover:border-amber-400 hover:bg-slate-900/90 hover:shadow-[0_0_35px_rgba(245,158,11,0.25)] group relative cursor-pointer overflow-hidden"
+            >
+              {/* Top Status Header */}
+              <div className="flex items-center justify-between mb-3.5 pb-2.5 border-b border-white/10">
+                <span className="text-[11px] font-extrabold uppercase tracking-wider text-amber-300 flex items-center gap-2">
+                  <span className={`h-2.5 w-2.5 rounded-full ${isTextVideoPlaying ? 'bg-emerald-400 animate-ping' : 'bg-amber-400'}`} />
+                  {isTextVideoPlaying ? '▶ VIDEO REVEALED & PLAYING (MOVE MOUSE OUT TO STOP)' : '🎥 HOVER MOUSE HERE TO PLAY VIDEO'}
+                </span>
+                <span className={`text-[10px] font-extrabold px-2.5 py-0.5 rounded border transition ${
+                  isTextVideoPlaying 
+                    ? 'text-emerald-400 bg-emerald-500/20 border-emerald-500/40' 
+                    : 'text-amber-300 bg-amber-400/10 border-amber-400/30'
+                }`}>
+                  {isTextVideoPlaying ? 'PLAYING VIDEO' : 'HOVER TO PLAY'}
+                </span>
+              </div>
 
-            {/* Psychological Value Bullets */}
-            <div className="mt-6 space-y-2.5">
-              <div className="flex items-center gap-3 text-sm text-slate-200 font-medium">
-                <CheckCircle2 size={18} className="text-emerald-400 flex-shrink-0" />
-                <span><strong className="text-white">100% Practical & Live Portal Access:</strong> File real GST returns & build Excel dashboards.</span>
+              {/* Text & Bullets (Hidden when video is playing) */}
+              <div className={isTextVideoPlaying ? 'hidden' : 'block'}>
+                {/* Subheadline Text */}
+                <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
+                  Why do 90% of commerce graduates struggle in entry-level interviews? Because colleges teach outdated 2008 textbooks. <strong className="text-amber-300">Commerce Gurukulam</strong> gives you live corporate mastery in <strong className="text-emerald-300">GST filing, Tally Prime, Excel Financial Modeling & Stock Markets</strong> in just 30 days or FastTrack 7 days!
+                </p>
+
+                {/* Value Bullets */}
+                <div className="mt-5 space-y-2.5">
+                  <div className="flex items-center gap-3 text-sm text-slate-200 font-medium">
+                    <CheckCircle2 size={18} className="text-emerald-400 flex-shrink-0" />
+                    <span><strong className="text-white">100% Practical & Live Portal Access:</strong> File real GST returns & build Excel dashboards.</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-slate-200 font-medium">
+                    <CheckCircle2 size={18} className="text-emerald-400 flex-shrink-0" />
+                    <span><strong className="text-white">College-Friendly Hours:</strong> Only 1 hour daily — fits perfectly alongside your degree.</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-slate-200 font-medium">
+                    <CheckCircle2 size={18} className="text-emerald-400 flex-shrink-0" />
+                    <span><strong className="text-amber-300">100% Fee-Back Guarantee:</strong> Master practical skills or get a 100% refund.</span>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center gap-3 text-sm text-slate-200 font-medium">
-                <CheckCircle2 size={18} className="text-emerald-400 flex-shrink-0" />
-                <span><strong className="text-white">College-Friendly Hours:</strong> Only 1 hour daily — fits perfectly alongside your degree.</span>
+
+              {/* Full Video Player (Always mounted in DOM, displayed when hovering) */}
+              <div className={isTextVideoPlaying ? 'block' : 'hidden'}>
+                <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-emerald-500/50 bg-slate-950 shadow-2xl">
+                  <video
+                    ref={textVideoRef}
+                    muted
+                    loop
+                    playsInline
+                    controls
+                    className="h-full w-full object-cover"
+                  >
+                    <source src="/videos/video.mp4" type="video/mp4" />
+                    <source src="/videos/overview.mp4" type="video/mp4" />
+                    <source src="/videos/demo.mp4" type="video/mp4" />
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4" />
+                  </video>
+                </div>
               </div>
-              <div className="flex items-center gap-3 text-sm text-slate-200 font-medium">
-                <CheckCircle2 size={18} className="text-emerald-400 flex-shrink-0" />
-                <span><strong className="text-amber-300">100% Fee-Back Guarantee:</strong> Master practical skills or get a 100% refund.</span>
-              </div>
+
             </div>
 
             {/* Call to Action Buttons */}
@@ -83,7 +175,7 @@ export default function Hero({ onApplyClick, onExploreCourses }) {
 
           </motion.div>
 
-          {/* Right Column: Dynamic Visual Student Card */}
+          {/* Right Column: Interactive Hover-to-Play Video Preview Card */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }} 
             animate={{ opacity: 1, scale: 1 }} 
@@ -92,22 +184,21 @@ export default function Hero({ onApplyClick, onExploreCourses }) {
           >
             <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-amber-500/20 via-emerald-500/20 to-cyan-500/20 blur-2xl opacity-60" />
             
-            <div className="relative rounded-3xl border border-emerald-500/30 bg-[#061122]/90 p-6 md:p-8 shadow-2xl backdrop-blur-xl">
+            <div 
+              onMouseEnter={handleSideMouseEnter}
+              onMouseLeave={handleSideMouseLeave}
+              className="relative rounded-3xl border border-emerald-500/40 bg-[#061122]/90 p-5 md:p-7 shadow-2xl backdrop-blur-xl group cursor-pointer transition duration-300 hover:border-amber-400"
+            >
               
-              {/* Top Header Card */}
-              <div className="flex items-center justify-between pb-6 border-b border-white/10">
+              {/* Header Badge */}
+              <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
                 <div>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-amber-400">STUDENT TRANSFORMATION CARD</span>
-                  <h3 className="text-xl font-bold text-white font-serif">College Student to High-Demand Professional</h3>
-                </div>
-                <div className="h-10 w-10 rounded-full bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-emerald-300 font-bold">
-                  94%
                 </div>
               </div>
 
               {/* Middle Comparison Widget */}
               <div className="mt-6 space-y-4">
-                
+
                 {/* Traditional College Path */}
                 <div className="rounded-xl border border-red-500/20 bg-red-950/20 p-4">
                   <div className="flex items-center justify-between mb-1">
