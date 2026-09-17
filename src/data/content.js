@@ -235,7 +235,11 @@ export const megaComboData = {
   ]
 };
 
-export const faqData = [
+export const faqs = [
+  {
+    question: 'What is included in the 12-in-1 Mega Commerce Skill Bundle?',
+    answer: 'The 12-in-1 Mega Bundle gives you all 12 core commerce master modules: GST Filing, Investment Banking & M&A, Forensic Accounting, Power BI, Ind AS & US GAAP, Income Tax & ITR, Financial Modeling & DCF, Advanced Excel, AI Prompting, Tally Prime, Stock Market Options, and FastTrack Semester Exam Prep!'
+  },
   {
     question: 'Are these courses suitable for complete beginners in college?',
     answer: 'Absolutely! All our courses and the 12-in-1 bundle are built step-by-step specifically for college students. We start from ground zero and guide you until you are building real corporate files.'
@@ -250,7 +254,7 @@ export const faqData = [
   },
   {
     question: 'What is the 100% Satisfaction Guarantee policy?',
-    answer: 'We are so confident in our practical training that if you complete the first 7 days of any course or bundle and feel it hasn’t upgraded your practical skills, we will resolve your concerns or refund your program fee with zero hassle.'
+    answer: 'We are so confident in our practical training that if you complete the first 7 days of any course or bundle and feel it hasn’t upgraded your practical skills, we will resolve your concerns with zero hassle.'
   },
   {
     question: 'How do I apply for the College Student Access Grant?',
@@ -327,32 +331,5 @@ export const studentTestimonials = [
     outcomeAfter: 'Scored 84% in Semester Exam & Built Dashboards',
     quote: 'The 7-Day FastTrack course saved my semester. The mind maps and question predictions were 100% accurate. Plus, the 48-Hr Excel course helped me build dashboards that got me a remote research role!',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80'
-  }
-];
-
-export const faqs = [
-  {
-    question: 'What is included in the 12-in-1 Mega Commerce Skill Bundle?',
-    answer: 'The 12-in-1 Mega Bundle gives you all 12 core commerce master modules: GST Filing, Investment Banking & M&A, Forensic Accounting, Power BI, Ind AS & US GAAP, Income Tax & ITR, Financial Modeling & DCF, Advanced Excel, AI Prompting, Tally Prime, Stock Market Options, and FastTrack Semester Exam Prep!'
-  },
-  {
-    question: 'I am a 1st year college student with zero practical experience. Can I join?',
-    answer: 'Absolutely! All our courses and the 12-in-1 bundle are built step-by-step specifically for college students. We start from ground zero and guide you until you are building real corporate files.'
-  },
-  {
-    question: 'How do 30-Day Courses and FastTrack Courses work alongside college classes?',
-    answer: 'All sessions require only 1 to 1.5 hours daily. You get lifetime access to recorded video modules, downloadable Excel sheets, live Q&A mentor rooms, and flexible schedules so your college attendance is never affected.'
-  },
-  {
-    question: 'Will I get an official government / corporate recognized certificate?',
-    answer: 'Yes! Every course includes an ISO-certified, employer-verifiable Certificate of Completion with a unique QR code and portfolio link that you can directly add to your LinkedIn profile and resume.'
-  },
-  {
-    question: 'What is the 100% Money-Back Guarantee policy?',
-    answer: 'We are so confident in our practical training that if you complete the first 7 days of any course or bundle and feel it hasn’t upgraded your practical skills, we will refund 100% of your fee with zero questions asked.'
-  },
-  {
-    question: 'How do I claim the 70% College Student Discount?',
-    answer: 'Simply click "Enroll Now" on any course card or click the "Claim 12-Course Bundle" button. Use the instant coupon code COLLEGE70 at checkout to lock in the special pricing!'
   }
 ];
