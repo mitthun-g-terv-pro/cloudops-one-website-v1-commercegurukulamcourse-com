@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { X, CheckCircle2, Clock, Award, Star, Tag, ShieldCheck, ArrowRight, Zap, Download } from 'lucide-react';
+import { X, CheckCircle2, Clock, Award, Star, Tag, ShieldCheck, ArrowRight, Zap, Download, Sparkles } from 'lucide-react';
 
 export default function CourseModal({ course, isOpen, onClose, onEnrollClick }) {
   const [promoApplied, setPromoApplied] = useState(true);

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { courses, courseCategories } from '../data/content';
-import { CheckCircle2, Clock, Star, Zap, ArrowRight, BookOpen, ShieldCheck, Tag } from 'lucide-react';
+import { CheckCircle2, Clock, Star, Zap, ArrowRight, BookOpen, ShieldCheck, Tag, Sparkles } from 'lucide-react';
 import CourseModal from './CourseModal';
 
 export default function CourseCatalog({ onEnrollClick }) {
