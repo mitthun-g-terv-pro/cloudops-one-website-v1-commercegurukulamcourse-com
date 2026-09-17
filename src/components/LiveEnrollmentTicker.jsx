@@ -32,7 +32,7 @@ export default function LiveEnrollmentTicker({ onEnrollClick }) {
   if (!isVisible || !notification) return null;
 
   return (
-    <div className="fixed bottom-5 left-5 z-40 max-w-sm animate-bounce-short">
+    <div className="fixed bottom-24 left-6 z-40 max-w-sm animate-bounce-short">
       <div 
         onClick={onEnrollClick}
         className="group relative rounded-2xl border border-emerald-500/40 bg-[#051329]/95 p-4 shadow-2xl backdrop-blur-xl flex items-start gap-3 cursor-pointer hover:border-amber-400/60 transition"
