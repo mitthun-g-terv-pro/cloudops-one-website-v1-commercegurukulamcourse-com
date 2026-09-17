@@ -76,11 +76,11 @@ export default function Hero({ onApplyClick, onExploreCourses }) {
 
             {/* Main Headline */}
             <h1 className="max-w-3xl font-serif text-4xl leading-[1.08] sm:text-5xl lg:text-6xl font-black tracking-tight">
-              <span className="text-slate-100">Stop Relying On 10-Year-Old </span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-amber-300 to-amber-400">College Theory.</span>
+              <span className="text-slate-100">Learn What Industry Uses Today, </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-amber-300 to-amber-400">Not What It Used Yesterday.</span>
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-200 to-cyan-300">
-                Master High-Demand Corporate Skills In 30 Days.
+                Become Job-Ready, Industry-Ready, Future-Ready.
               </span>
             </h1>
 
