@@ -71,7 +71,7 @@ export default function Hero({ onApplyClick, onExploreCourses }) {
                 onClick={onApplyClick} 
                 className="inline-flex items-center gap-2 rounded-full border border-amber-400/40 bg-amber-500/10 px-6 py-4 text-sm font-bold text-amber-300 transition hover:bg-amber-400/20 hover:border-amber-400/70 cursor-pointer"
               >
-                <Sparkles size={16} /> Claim 70% College Discount
+                <Sparkles size={16} /> Claim Student Access Grant
               </button>
             </div>
 

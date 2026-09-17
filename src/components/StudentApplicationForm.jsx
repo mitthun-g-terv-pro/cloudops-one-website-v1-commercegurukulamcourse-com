@@ -51,14 +51,14 @@ export default function StudentApplicationForm({ isOpen, onClose, preselectedCou
               Congratulations ${formData.fullName}! 🎉
             </p>
             <p style="color: #cbd5e1;">
-              You have successfully enrolled in <strong>${formData.courseTrack}</strong> with the 70% College Discount code <strong style="color: #f59e0b;">${formData.couponCode}</strong>.
+              You have successfully enrolled in <strong>${formData.courseTrack}</strong> with the College Student Grant <strong style="color: #f59e0b;">${formData.couponCode}</strong>.
             </p>
             <div style="background-color: #030b18; border: 1px solid #10b981; border-radius: 12px; padding: 18px; margin: 20px 0;">
               <p style="margin: 0 0 8px 0; font-weight: bold; color: #34d399;">✓ Student Enrollment Summary:</p>
               <p style="margin: 4px 0; color: #e2e8f0;">• <strong>Student Name:</strong> ${formData.fullName}</p>
               <p style="margin: 4px 0; color: #e2e8f0;">• <strong>College/University:</strong> ${formData.collegeName || 'Commerce Student'}</p>
               <p style="margin: 4px 0; color: #e2e8f0;">• <strong>Course Selected:</strong> ${formData.courseTrack}</p>
-              <p style="margin: 4px 0; color: #e2e8f0;">• <strong>Status:</strong> Seat Locked & Discount Applied</p>
+              <p style="margin: 4px 0; color: #e2e8f0;">• <strong>Status:</strong> Seat Locked & Verified Student Grant</p>
             </div>
             <p style="color: #94a3b8; font-size: 13px;">
               Our Student Onboarding Mentor will reach you shortly on WhatsApp (<strong>${formData.phone}</strong>) with your live portal access keys and video lecture credentials.
@@ -76,7 +76,7 @@ Congratulations on enrolling in Commerce Gurukulam!
 
 Selected Course: ${formData.courseTrack}
 College: ${formData.collegeName}
-Coupon Applied: ${formData.couponCode} (70% Off)
+Grant Code: ${formData.couponCode}
 
 Our mentor will contact you shortly at ${formData.phone} with your portal credentials.
 
@@ -144,7 +144,7 @@ Commerce Gurukulam`;
                 Enroll In Commerce Gurukulam
               </h2>
               <p className="text-slate-300 text-xs md:text-sm font-medium mt-1">
-                Lock in your 70% College Student Grant discount before seats fill up!
+                Lock in your College Student Access Grant before seats fill up!
               </p>
             </div>
 
@@ -226,23 +226,23 @@ Commerce Gurukulam`;
                   required
                   className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/80 border border-slate-700 text-white focus:outline-none focus:border-emerald-400 transition text-sm font-medium"
                 >
-                  <option value="30-Day Practical GST, Income Tax & E-Filing Masterclass">30-Day Practical GST, Income Tax & E-Filing (₹1,499)</option>
-                  <option value="30-Day Tally Prime + Advanced Financial Excel Mastery">30-Day Tally Prime + Advanced Excel (₹1,299)</option>
-                  <option value="30-Day Wall Street Financial Modeling & DCF Valuation">30-Day Wall Street Financial Modeling & DCF (₹1,999)</option>
-                  <option value="30-Day Technical Analysis & Stock Market Masterclass">30-Day Stock Market & Options Trading (₹1,399)</option>
-                  <option value="7-Day FastTrack Corporate Accounting Exam Prep">7-Day FastTrack Semester Exam Victory (₹699)</option>
-                  <option value="48-Hour Corporate Excel Speed Bootcamp">48-Hour Corporate Excel Speed Sprint (₹499)</option>
+                  <option value="30-Day Practical GST, Income Tax & E-Filing Masterclass">30-Day Practical GST, Income Tax & E-Filing Masterclass</option>
+                  <option value="30-Day Tally Prime + Advanced Financial Excel Mastery">30-Day Tally Prime + Advanced Excel Mastery</option>
+                  <option value="30-Day Wall Street Financial Modeling & DCF Valuation">30-Day Wall Street Financial Modeling & DCF Valuation</option>
+                  <option value="30-Day Technical Analysis & Stock Market Masterclass">30-Day Stock Market & Options Trading Masterclass</option>
+                  <option value="7-Day FastTrack Corporate Accounting Exam Prep">7-Day FastTrack Semester Exam Prep</option>
+                  <option value="48-Hour Corporate Excel Speed Bootcamp">48-Hour Corporate Excel Speed Bootcamp</option>
                 </select>
               </div>
 
-              {/* Coupon Box */}
+              {/* Grant Box */}
               <div className="rounded-xl border border-amber-400/40 bg-amber-950/20 p-3 flex items-center justify-between text-xs">
                 <div className="flex items-center gap-2">
                   <Tag size={16} className="text-amber-400" />
-                  <span className="font-bold text-amber-300">Code COLLEGE70 Applied</span>
+                  <span className="font-bold text-amber-300">College Student Grant Applied</span>
                 </div>
                 <span className="font-extrabold text-emerald-400 bg-emerald-500/20 px-2 py-0.5 rounded">
-                  SAVED 70%
+                  VERIFIED GRANT
                 </span>
               </div>
 

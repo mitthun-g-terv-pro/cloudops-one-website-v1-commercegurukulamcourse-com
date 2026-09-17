@@ -176,18 +176,16 @@ export default function MegaComboSection({ onEnrollClick }) {
                   </div>
                 </div>
 
-                {/* Offer Price Details */}
+                {/* Bundle Offer Details */}
                 <div>
-                  <p className="text-xs font-bold text-purple-200">
-                    Get All These 12 Courses @
+                  <p className="text-xs font-bold text-purple-200 uppercase tracking-wider">
+                    Full Student All-Access Package
                   </p>
                   <div className="flex items-baseline gap-2 mt-0.5">
-                    <span className="text-sm text-slate-400 line-through font-bold">INR 45,000</span>
-                    <span className="text-2xl sm:text-3xl font-black text-amber-300">₹2,499</span>
-                    <span className="text-[10px] text-emerald-400 font-bold uppercase">+ GST</span>
+                    <span className="text-xl sm:text-2xl font-black text-amber-300">12-in-1 Complete Skill Bundle</span>
                   </div>
-                  <p className="text-[10px] text-slate-400 font-semibold mt-0.5 flex items-center gap-1">
-                    <Tag size={10} className="text-amber-400" /> 70% College Grant Code <strong className="text-amber-300">COLLEGE70</strong> Applied!
+                  <p className="text-[10px] text-slate-300 font-semibold mt-0.5 flex items-center gap-1">
+                    <Sparkles size={10} className="text-amber-400" /> Instant Access to All Core Masterclasses & FastTrack Sprints
                   </p>
                 </div>
 
@@ -195,7 +193,7 @@ export default function MegaComboSection({ onEnrollClick }) {
 
               {/* Instant Enrollment CTA */}
               <button
-                onClick={() => onEnrollClick({ title: '12-in-1 Mega Commerce Skill Bundle', discountPrice: '₹2,499' })}
+                onClick={() => onEnrollClick({ title: '12-in-1 Mega Commerce Skill Bundle' })}
                 className="mt-5 w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-400 via-emerald-400 to-emerald-500 py-3.5 text-xs font-extrabold uppercase tracking-wider text-slate-950 hover:scale-105 transition shadow-lg shadow-emerald-500/20 cursor-pointer"
               >
                 Grab 12-Course Combo Now <ArrowRight size={16} />

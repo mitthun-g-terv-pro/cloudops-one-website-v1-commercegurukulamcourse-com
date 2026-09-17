@@ -33,7 +33,7 @@ export default function FastTrackBanner({ onEnrollClick }) {
               <div className="rounded-2xl border border-amber-500/30 bg-slate-950/80 p-5">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-xs font-bold text-amber-300 uppercase">⚡ 7-DAY EXAM VICTORY</span>
-                  <span className="text-xs font-black text-emerald-400">Only ₹699</span>
+                  <span className="text-[11px] font-extrabold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">Exam Victory</span>
                 </div>
                 <h4 className="text-base font-bold text-white mb-1">B.Com & BBA Semester Corporate Accounting</h4>
                 <p className="text-xs text-slate-400">10-Year university question papers solved live + formula cheat sheets for 80%+ distinction score.</p>
@@ -43,7 +43,7 @@ export default function FastTrackBanner({ onEnrollClick }) {
               <div className="rounded-2xl border border-emerald-500/30 bg-slate-950/80 p-5">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-xs font-bold text-emerald-300 uppercase">⚡ 48-HOUR EXCEL SPRINT</span>
-                  <span className="text-xs font-black text-amber-400">Only ₹499</span>
+                  <span className="text-[11px] font-extrabold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">Speed Sprint</span>
                 </div>
                 <h4 className="text-base font-bold text-white mb-1">Corporate Excel & Dashboard Speed Bootcamp</h4>
                 <p className="text-xs text-slate-400">Throw away your mouse! Master the 20 keyboard shortcuts, XLOOKUP & dashboards recruiters test.</p>

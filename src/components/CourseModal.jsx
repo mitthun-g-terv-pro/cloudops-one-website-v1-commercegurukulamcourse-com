@@ -92,18 +92,16 @@ export default function CourseModal({ course, isOpen, onClose, onEnrollClick }) 
           </div>
         </div>
 
-        {/* Pricing & Checkout Block */}
+        {/* Access & Checkout Block */}
         <div className="rounded-2xl border border-emerald-500/40 bg-gradient-to-r from-emerald-950/40 via-slate-900 to-amber-950/30 p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
-            <div className="flex items-baseline gap-3">
-              <span className="text-3xl font-black text-amber-300">{course.discountPrice}</span>
-              <span className="text-sm text-slate-400 line-through font-semibold">{course.originalPrice}</span>
-              <span className="rounded bg-amber-400/20 text-amber-300 text-xs font-extrabold px-2 py-0.5 border border-amber-400/30">
-                SAVE 70%
+            <div className="flex items-center gap-3">
+              <span className="text-xl font-bold text-amber-300 flex items-center gap-1.5">
+                <Sparkles size={18} className="text-emerald-400" /> Full Certificate Access
               </span>
             </div>
             <p className="text-xs text-slate-400 mt-1 font-medium flex items-center gap-1">
-              <Tag size={12} className="text-amber-400" /> College Discount Code <strong className="text-emerald-300">COLLEGE70</strong> Applied!
+              <Award size={12} className="text-amber-400" /> ISO Certified Verifiable Skill Credential Included
             </p>
           </div>
 

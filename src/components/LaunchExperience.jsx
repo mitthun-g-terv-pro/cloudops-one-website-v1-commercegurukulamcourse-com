@@ -172,9 +172,9 @@ export default function LaunchExperience({ onApplyClick }) {
           <div className="rounded-2xl border border-white/10 bg-slate-950/60 p-5">
             <div className="flex items-center gap-3 text-emerald-300">
               <BriefcaseBusiness size={18} />
-              <span className="text-xs uppercase tracking-[0.2em]">Program fee</span>
+              <span className="text-xs uppercase tracking-[0.2em]">Program format</span>
             </div>
-            <p className="mt-4 text-3xl font-bold text-slate-100">₹90,000</p>
+            <p className="mt-4 text-3xl font-bold text-slate-100">3 Months</p>
             <p className="mt-2 text-sm text-slate-400">All-inclusive residential execution accelerator</p>
           </div>
 

@@ -20,7 +20,7 @@ import {
 
 const CATEGORIES = [
   { id: 'all', label: '🔥 All FAQs' },
-  { id: 'fee', label: '💰 Fee & Seats' },
+  { id: 'fee', label: '🎓 Admissions & Seats' },
   { id: 'schedule', label: '⚡ 5 AM Schedule' },
   { id: 'curriculum', label: '🤖 AI & LBO Labs' },
   { id: 'placement', label: '🏆 Placements' },
@@ -28,7 +28,7 @@ const CATEGORIES = [
 ];
 
 const SUGGESTIONS = [
-  { text: 'What is the ₹90,000 tuition fee and what does it include?', cat: 'fee' },
+  { text: 'How do I apply for the Student Access Grant?', cat: 'fee' },
   { text: 'What is the 5:00 AM Daily Discipline Protocol?', cat: 'schedule' },
   { text: 'How does 100% Placement Support & Referral work?', cat: 'placement' },
   { text: 'Where is the residential campus located?', cat: 'location' },
@@ -39,11 +39,11 @@ const SUGGESTIONS = [
 // Granular Knowledge Base for Chanakya AI 2.0
 const KNOWLEDGE_BASE = [
   {
-    keywords: ['fee', 'tuition', 'cost', 'price', '90,000', '90k', 'payment', 'installment'],
-    title: 'Program Fee & Inclusions',
-    response: `The total program fee for Commerce Gurukulam is **₹90,000 (All-Inclusive)**.
+    keywords: ['fee', 'tuition', 'cost', 'price', '90,000', '90k', 'payment', 'installment', 'grant', 'admission'],
+    title: 'Admissions & Program Inclusions',
+    response: `The Commerce Gurukulam Executive Accelerator is an all-inclusive residential learning program.
 
-✨ **What your investment covers:**
+✨ **What the program covers:**
 • 3-Month Luxury Residential Accommodation & Gourmet Dining
 • Enterprise Licenses for Wall Street & Dalal Street Valuation Software
 • Custom AI Prompt Engineering & Forensic Audit Lab Access
@@ -136,7 +136,7 @@ export default function AIAssistant({ onApplyClick }) {
       type: 'bot',
       text: `Hello! I am **Chanakya AI**, your Executive Admissions Concierge at **Commerce Gurukulam**.
 
-I can answer any questions about our 3-Month Executive Accelerator, ₹90,000 tuition, 5:00 AM discipline, live LBO labs, or 100% placement pipeline in Chennai.
+I can answer any questions about our 3-Month Executive Accelerator, admissions criteria, 5:00 AM discipline, live LBO labs, or 100% placement pipeline in Chennai.
 
 How can I assist your career today?`,
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),

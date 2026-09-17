@@ -13,7 +13,6 @@ export default function ROICalculator({ onEnrollClick }) {
           role: 'Investment Banking & Equity Analyst',
           careerImpact: 'Institutional Valuation & M&A Pitch Books',
           practicalAdvantage: '3 Live Deal Models for Resume Portfolio',
-          fee: '₹1,999',
           skillMultiplier: '10x Speed',
           hiringChance: '96%'
         };
@@ -22,7 +21,6 @@ export default function ROICalculator({ onEnrollClick }) {
           role: 'Corporate Tax Consultant & GST Specialist',
           careerImpact: 'Government Portal E-Filing & Audit Mastery',
           practicalAdvantage: 'Independent Client Practice & CA Office Ready',
-          fee: '₹1,499',
           skillMultiplier: '100% Practical',
           hiringChance: '94%'
         };
@@ -31,7 +29,6 @@ export default function ROICalculator({ onEnrollClick }) {
           role: 'Corporate Accountant & MIS Data Analyst',
           careerImpact: 'Tally Prime Payroll & Dynamic Excel Dashboards',
           practicalAdvantage: 'Master 20+ Keyboard Speed Shortcuts & Power Query',
-          fee: '₹1,299',
           skillMultiplier: 'Top Speed Analyst',
           hiringChance: '92%'
         };
@@ -40,7 +37,6 @@ export default function ROICalculator({ onEnrollClick }) {
           role: 'Semester Distinction & Placement Ready',
           careerImpact: '80%+ University Semester Distinction',
           practicalAdvantage: '10-Year Question Paper Mastery & Mind Maps',
-          fee: '₹699',
           skillMultiplier: '7-Day Sprint',
           hiringChance: '90%'
         };
@@ -67,7 +63,7 @@ export default function ROICalculator({ onEnrollClick }) {
           </h2>
 
           <p className="mt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
-            Investing ₹699 - ₹1,999 in practical skills isn't an expense — it's the highest yielding skill upgrade of your entire college life.
+            Investing your time in practical skills isn't an expense — it's the highest yielding skill upgrade of your entire college life.
           </p>
         </div>
 
@@ -115,10 +111,10 @@ export default function ROICalculator({ onEnrollClick }) {
               </label>
               <div className="space-y-2.5">
                 {[
-                  { id: '30day-modeling', label: '30-Day Wall Street Financial Modeling (IB / PE Track)', fee: '₹1,999' },
-                  { id: '30day-gst', label: '30-Day Practical GST & Income Tax Masterclass', fee: '₹1,499' },
-                  { id: '30day-tally', label: '30-Day Tally Prime + Advanced Corporate Excel', fee: '₹1,299' },
-                  { id: 'fasttrack', label: '7-Day FastTrack Exam Victory / 48-Hr Excel Sprint', fee: '₹699' }
+                  { id: '30day-modeling', label: '30-Day Wall Street Financial Modeling (IB / PE Track)', badge: 'IB & PE' },
+                  { id: '30day-gst', label: '30-Day Practical GST & Income Tax Masterclass', badge: 'GST & Tax' },
+                  { id: '30day-tally', label: '30-Day Tally Prime + Advanced Corporate Excel', badge: 'Tally & Excel' },
+                  { id: 'fasttrack', label: '7-Day FastTrack Exam Victory / 48-Hr Excel Sprint', badge: 'FastTrack' }
                 ].map((track) => (
                   <div
                     key={track.id}
@@ -130,8 +126,8 @@ export default function ROICalculator({ onEnrollClick }) {
                     }`}
                   >
                     <span className="text-xs font-bold">{track.label}</span>
-                    <span className="text-xs font-black text-amber-300 bg-amber-400/10 px-2 py-1 rounded border border-amber-400/20">
-                      {track.fee}
+                    <span className="text-[11px] font-extrabold text-amber-300 bg-amber-400/10 px-2 py-1 rounded border border-amber-400/20">
+                      {track.badge}
                     </span>
                   </div>
                 ))}
@@ -140,7 +136,7 @@ export default function ROICalculator({ onEnrollClick }) {
 
             {/* Psychological Callout */}
             <div className="rounded-xl bg-slate-900/80 p-4 border border-slate-800 text-xs text-slate-300 font-medium">
-              💡 <strong className="text-amber-300">College Fact:</strong> Investing {data.fee} today equips you with verified portfolio skills that set you apart from 10,000+ competitors in campus interviews.
+              💡 <strong className="text-amber-300">College Fact:</strong> Enrolling today equips you with verified portfolio skills that set you apart from 10,000+ competitors in campus interviews.
             </div>
 
           </div>
@@ -191,7 +187,7 @@ export default function ROICalculator({ onEnrollClick }) {
               onClick={onEnrollClick}
               className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-400 via-emerald-400 to-emerald-500 py-4 text-xs font-extrabold uppercase tracking-wider text-slate-950 hover:scale-[1.02] transition shadow-lg shadow-emerald-500/20 cursor-pointer"
             >
-              Lock In {data.fee} Student Pricing <ArrowRight size={16} />
+              Lock In Student Access Spot <ArrowRight size={16} />
             </button>
 
           </div>

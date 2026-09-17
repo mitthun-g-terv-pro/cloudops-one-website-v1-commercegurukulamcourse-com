@@ -29,7 +29,7 @@ export default function Navbar({ onApplyClick, onHomeClick }) {
           onClick={onApplyClick}
           className="ml-2 hidden sm:inline-flex items-center gap-1 rounded bg-amber-400/20 px-2 py-0.5 text-[11px] font-bold text-amber-300 hover:bg-amber-400/30 transition border border-amber-400/30 shrink-0"
         >
-          <Tag size={11} /> Claim 70% OFF
+          <Tag size={11} /> Apply for Student Grant
         </button>
       </div>
 

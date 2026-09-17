@@ -77,8 +77,6 @@ export const courses = [
     tagline: 'Become a Certified Corporate Tax Consultant before leaving college.',
     duration: '30 Days (1 Hr/Day)',
     level: 'Beginner to Advanced',
-    originalPrice: '₹4,999',
-    discountPrice: '₹1,499',
     enrolledCount: '4,820+ Students Enrolled',
     rating: '4.9/5 (1,240 reviews)',
     highlights: [
@@ -104,8 +102,6 @@ export const courses = [
     tagline: 'Transform into a High-Speed Corporate Accountant & Data Analyst.',
     duration: '30 Days (1 Hr/Day)',
     level: 'Beginner to Pro',
-    originalPrice: '₹5,999',
-    discountPrice: '₹1,299',
     enrolledCount: '5,310+ Students Enrolled',
     rating: '4.9/5 (2,100 reviews)',
     highlights: [
@@ -131,8 +127,6 @@ export const courses = [
     tagline: 'Build institutional DCF & M&A Pitch Books that command Wall Street respect.',
     duration: '30 Days (1.5 Hrs/Day)',
     level: 'Intermediate to Advanced',
-    originalPrice: '₹8,999',
-    discountPrice: '₹1,999',
     enrolledCount: '2,940+ Students Enrolled',
     rating: '5.0/5 (980 reviews)',
     highlights: [
@@ -158,8 +152,6 @@ export const courses = [
     tagline: 'Understand market dynamics, risk management, and smart money movement.',
     duration: '30 Days (1 Hr/Day)',
     level: 'Beginner to Trader',
-    originalPrice: '₹6,499',
-    discountPrice: '₹1,399',
     enrolledCount: '3,870+ Students Enrolled',
     rating: '4.8/5 (1,450 reviews)',
     highlights: [
@@ -187,8 +179,6 @@ export const courses = [
     tagline: 'Score 80%+ in your College Semester Exams with Zero Stress.',
     duration: '7 Days Sprint (2 Hrs/Day)',
     level: 'Exam Focused',
-    originalPrice: '₹2,999',
-    discountPrice: '₹699',
     enrolledCount: '6,100+ Students Enrolled',
     rating: '4.9/5 (3,400 reviews)',
     highlights: [
@@ -214,8 +204,6 @@ export const courses = [
     tagline: 'Master the 20 Excel Shortcuts & Formulas Every Hiring Manager Tests.',
     duration: '2 Days (3 Hrs/Day)',
     level: 'Crash Course',
-    originalPrice: '₹1,999',
-    discountPrice: '₹499',
     enrolledCount: '8,400+ Students Enrolled',
     rating: '4.9/5 (4,120 reviews)',
     highlights: [
@@ -228,8 +216,45 @@ export const courses = [
       { week: 'Day 1', topic: 'Speed Shortcuts, Data Cleaning, Advanced Formulas & Conditional Formatting' },
       { week: 'Day 2', topic: 'Dynamic Pivot Tables, Interactive Dashboards & Live Corporate Test Simulation' }
     ],
-    psychologicalPush: 'Need an urgent skill booster for an interview tomorrow? This 48-hour sprint gives you immediate practical confidence.',
-    targetAudience: 'Students preparing for upcoming campus placement drives'
+    psychologicalPush: 'Excel speed is the single most tested skill in corporate accounting interviews. Master key shortcuts in 48 hours!',
+    targetAudience: 'Any Student Preparing for Corporate Placements'
+  }
+];
+
+export const megaComboData = {
+  title: '12-in-1 Mega Commerce Skill Bundle',
+  subtitle: 'The Ultimate All-Access Commerce Skill Package for Undergrads',
+  totalCoursesCount: 12,
+  description: 'Get lifetime access to all 6 core 30-Day Masterclasses + 6 FastTrack Exam & Excel Sprints in one comprehensive enrollment.',
+  highlights: [
+    'Access to all 12 Core & FastTrack Masterclasses',
+    'ISO Certified Verifiable Certificates for all 12 modules',
+    '50+ Downloadable Corporate Excel Templates & Financial Models',
+    'Exclusive Entry to Live Mentor Q&A & Interview Prep Rooms',
+    'Direct Placement Referral Pipeline to 100+ Partner Firms'
+  ]
+};
+
+export const faqData = [
+  {
+    question: 'Are these courses suitable for complete beginners in college?',
+    answer: 'Absolutely! All our courses and the 12-in-1 bundle are built step-by-step specifically for college students. We start from ground zero and guide you until you are building real corporate files.'
+  },
+  {
+    question: 'How do 30-Day Courses and FastTrack Courses work alongside college classes?',
+    answer: 'All sessions require only 1 to 1.5 hours daily. You get lifetime access to recorded video modules, downloadable Excel sheets, live Q&A mentor rooms, and flexible schedules so your college attendance is never affected.'
+  },
+  {
+    question: 'Will I get an official government / corporate recognized certificate?',
+    answer: 'Yes! Every course includes an ISO-certified, employer-verifiable Certificate of Completion with a unique QR code and portfolio link that you can directly add to your LinkedIn profile and resume.'
+  },
+  {
+    question: 'What is the 100% Satisfaction Guarantee policy?',
+    answer: 'We are so confident in our practical training that if you complete the first 7 days of any course or bundle and feel it hasn’t upgraded your practical skills, we will resolve your concerns or refund your program fee with zero hassle.'
+  },
+  {
+    question: 'How do I apply for the College Student Access Grant?',
+    answer: 'Simply click "Enroll Now" on any course card or click the "Claim 12-Course Bundle" button. Select your college details in the application form to claim instant student enrollment!'
   }
 ];
 

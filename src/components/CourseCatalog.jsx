@@ -116,14 +116,10 @@ export default function CourseCatalog({ onEnrollClick }) {
               {/* Bottom Action Footer */}
               <div className="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
                 
-                {/* Price Display */}
+                {/* Badge Display */}
                 <div>
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-2xl font-black text-amber-300">{course.discountPrice}</span>
-                    <span className="text-xs text-slate-500 line-through font-semibold">{course.originalPrice}</span>
-                  </div>
-                  <span className="text-[10px] text-emerald-400 font-bold uppercase tracking-wider flex items-center gap-1">
-                    <Tag size={10} /> 70% Student Discount Applied
+                  <span className="text-xs font-bold text-amber-300 uppercase tracking-wider flex items-center gap-1.5 bg-amber-400/10 px-3 py-1.5 rounded-lg border border-amber-400/20">
+                    <Sparkles size={12} className="text-emerald-400" /> Full Certification Track
                   </span>
                 </div>
 
