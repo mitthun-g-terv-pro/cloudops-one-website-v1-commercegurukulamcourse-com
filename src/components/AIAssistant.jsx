@@ -1,22 +1,129 @@
 import { useState, useRef, useEffect } from 'react';
-import { 
-  Send, 
-  X, 
-  Bot, 
-  User, 
-  Sparkles, 
-  Volume2, 
-  VolumeX, 
-  PhoneCall, 
-  ArrowRight, 
-  MessageSquare, 
-  CheckCircle2, 
-  ShieldCheck, 
-  Rocket, 
-  Clock, 
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Send,
+  X,
+  Bot,
+  User,
+  Sparkles,
+  Volume2,
+  VolumeX,
+  PhoneCall,
+  ArrowRight,
+  MessageSquare,
+  CheckCircle2,
+  ShieldCheck,
+  Rocket,
+  Clock,
   Award,
-  BookOpen
+  BookOpen,
+  Zap,
+  Newspaper,
+  TrendingUp
 } from 'lucide-react';
+
+const LATEST_NEWS_ITEMS = [
+  {
+    id: 1,
+    tag: '⚡ ADMISSIONS',
+    headline: 'Batch 14 Admissions: Only 8 of 40 Seats Remaining for Chennai Campus!'
+  },
+  {
+    id: 2,
+    tag: '📰 SEBI DIRECTIVE',
+    headline: 'SEBI mandates practical LBO modeling & AI audit skills for M&A Analysts in 2026.'
+  },
+  {
+    id: 3,
+    tag: '🏆 PLACEMENT ALERT',
+    headline: 'Top PE & IB firms hire 12 Gurukulam graduates at avg ₹14.5 LPA package!'
+  },
+  {
+    id: 4,
+    tag: '🤖 AI IN FINANCE',
+    headline: 'Big 4 Audit firms deploy AI SEC extractions—Master AI Prompting in our Labs!'
+  },
+  {
+    id: 5,
+    tag: '📈 MARKET UPDATE',
+    headline: 'Indian PE/VC deal flow surges 34%—High demand for Valuation & DCF Masters.'
+  },
+  {
+    id: 6,
+    tag: '🏦 RBI AUDIT NORMS',
+    headline: 'RBI introduces tighter NPA audit guidelines—Demand spikes for forensic accountants.'
+  },
+  {
+    id: 7,
+    tag: '🌐 GIFT CITY JOBS',
+    headline: 'GIFT City IFSC sees record $5.2B inflows—Boutique IB desks scaling hiring.'
+  },
+  {
+    id: 8,
+    tag: '💼 SALARY BENCHMARK',
+    headline: 'Corporate Finance starting packages up 28% for candidates with hands-on LBO decks.'
+  },
+  {
+    id: 9,
+    tag: '🔥 INDUSTRY TREND',
+    headline: 'Big 4 Valuation teams transition from manual Excel to AI financial modeling.'
+  },
+  {
+    id: 10,
+    tag: '🏛️ WALL STREET DEALS',
+    headline: 'Bulge-bracket IB firms prioritize candidates with verified institutional deal decks.'
+  },
+  {
+    id: 11,
+    tag: '📍 CHENNAI CAMPUS',
+    headline: 'Chennai Residential Accelerator open: 3-month immersive CFO war room training.'
+  },
+  {
+    id: 12,
+    tag: '⚠️ SKILL GAP ALERT',
+    headline: 'Commerce graduates without practical deal experience face 40% lower callback rates.'
+  },
+  {
+    id: 13,
+    tag: '🚀 NEW MODULE',
+    headline: 'Startup Cap Table & VC Liquidation Math added to Gurukulam Master Module 9.'
+  },
+  {
+    id: 14,
+    tag: '⚡ 5 AM DISCIPLINE',
+    headline: '5:00 AM Elite Discipline Protocol producing top 1% market analysts in India.'
+  },
+  {
+    id: 15,
+    tag: '🔍 FORENSIC AUDIT',
+    headline: 'Forensic Accounting AI tools adopted by 80% of top corporate governance boards.'
+  },
+  {
+    id: 16,
+    tag: '📊 PRIVATE CREDIT',
+    headline: 'Private Credit funds expand in India—Urgent industry demand for Debt Sizing skills.'
+  },
+  {
+    id: 17,
+    tag: '🎙️ CFO DEFENSES',
+    headline: 'Direct 1-on-1 CFO pitch defenses begin for Cohort 14 candidate evaluation.'
+  },
+  {
+    id: 18,
+    tag: '🎓 ALUMNI NETWORK',
+    headline: 'Gurukulam alumni pool crosses 450+ placed across IB, PE, and Big 4 desks.'
+  },
+  {
+    id: 19,
+    tag: '💻 DEAL TERMINAL',
+    headline: 'Real-time Dalal Street market terminal sandbox now active for student deal building.'
+  },
+  {
+    id: 20,
+    tag: '🎁 ACCESS GRANT',
+    headline: 'Student Access Grant open for early applicants—Up to ₹30,000 tuition sponsorship.'
+  }
+];
 
 const CATEGORIES = [
   { id: 'all', label: '🔥 All FAQs' },
@@ -127,8 +234,23 @@ Our admissions team is online to assist with cohort slot reservations and screen
   }
 ];
 
-export default function AIAssistant({ onApplyClick }) {
-  const [isOpen, setIsOpen] = useState(false);
+export default function AIAssistant({ onApplyClick, isOpen: externalIsOpen, setIsOpen: externalSetIsOpen }) {
+  const [internalIsOpen, setInternalIsOpen] = useState(false);
+  const isOpen = externalIsOpen !== undefined ? externalIsOpen : internalIsOpen;
+  const setIsOpen = externalSetIsOpen || setInternalIsOpen;
+
+  const [currentNewsIndex, setCurrentNewsIndex] = useState(0);
+  const [showNewsFeed, setShowNewsFeed] = useState(true);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentNewsIndex((prev) => (prev + 1) % LATEST_NEWS_ITEMS.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const currentNews = LATEST_NEWS_ITEMS[currentNewsIndex];
+
   const [activeTab, setActiveTab] = useState('all');
   const [messages, setMessages] = useState([
     {
@@ -159,7 +281,7 @@ How can I assist your career today?`,
   // Voice Text-to-Speech handler
   const speakMessage = (text) => {
     if (!('speechSynthesis' in window)) return;
-    
+
     if (isSpeaking) {
       window.speechSynthesis.cancel();
       setIsSpeaking(false);
@@ -194,7 +316,7 @@ How can I assist your career today?`,
 
     setTimeout(() => {
       const lower = userText.toLowerCase();
-      let matchedEntry = KNOWLEDGE_BASE.find(item => 
+      let matchedEntry = KNOWLEDGE_BASE.find(item =>
         item.keywords.some(kw => lower.includes(kw))
       );
 
@@ -233,40 +355,151 @@ Would you like to schedule a 1-on-1 screening call or connect on WhatsApp?`;
 
   return (
     <>
-      {/* Floating Trigger Button */}
+      {/* Official 3D Ninja Turtle Mascot Floating Trigger (Replaces Old Green Pill Button) */}
       {!isOpen && (
-        <button
-          onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-gradient-to-r from-yellow-400 via-amber-400 to-emerald-400 text-slate-950 px-4 py-3 rounded-full shadow-[0_0_35px_rgba(234,179,8,0.4)] transition transform hover:scale-105 group cursor-pointer"
-        >
-          <div className="relative flex items-center justify-center w-8 h-8 bg-slate-950 rounded-full text-yellow-400">
-            <Sparkles size={18} className="animate-pulse" />
+        <div className="fixed bottom-3 right-4 sm:right-8 z-50 pointer-events-auto select-none flex flex-col items-center">
+
+          {/* Mascot Speech Bubble with Auto-Cycling Latest News Ticker */}
+          {showNewsFeed && (
+            <div
+              onClick={() => {
+                setIsOpen(true);
+                handleSendMessage(`Tell me more about this update: ${currentNews.headline}`);
+              }}
+              className="mb-2 w-[250px] sm:w-[290px] rounded-2xl bg-gradient-to-r from-slate-950 via-[#071324] to-slate-950 border border-amber-400/70 p-2.5 shadow-[0_0_35px_rgba(245,158,11,0.45)] backdrop-blur-md relative cursor-pointer group hover:border-amber-300 transition-all hover:scale-[1.02]"
+            >
+              {/* Prominent Floating Close X Button */}
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setShowNewsFeed(false);
+                }}
+                className="absolute -top-2.5 -right-2.5 z-30 w-6 h-6 rounded-full bg-slate-950 border border-amber-400/90 text-amber-300 hover:bg-amber-400 hover:text-slate-950 transition flex items-center justify-center shadow-[0_0_15px_rgba(245,158,11,0.6)] cursor-pointer"
+                title="Close Live News Feed"
+              >
+                <X size={12} />
+              </button>
+
+              {/* Header / Live News Badge */}
+              <div className="flex items-center justify-between gap-1.5 pb-1.5 mb-1.5 border-b border-amber-400/20 pr-3">
+                <div className="flex items-center gap-1.5">
+                  <span className="flex h-2 w-2 relative shrink-0">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500" />
+                  </span>
+                  <span className="text-[9px] font-black tracking-wider uppercase text-amber-300 flex items-center gap-1">
+                    <Newspaper size={10} className="text-amber-400" /> LIVE NEWS
+                  </span>
+                </div>
+                <span className="text-[8px] font-black text-amber-300 bg-amber-400/15 border border-amber-400/30 px-1.5 py-0.5 rounded-md uppercase tracking-wider">
+                  {currentNews.tag}
+                </span>
+              </div>
+
+              {/* News Headline content with smooth transition */}
+              <div className="relative overflow-hidden min-h-[38px] flex items-center">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentNews.id}
+                    initial={{ opacity: 0, y: 6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -6 }}
+                    transition={{ duration: 0.3 }}
+                    className="w-full"
+                  >
+                    <p className="text-[11px] font-bold text-slate-100 leading-snug group-hover:text-amber-200 transition">
+                      "{currentNews.headline}"
+                    </p>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+
+              {/* Sub-footer tip */}
+              <div className="mt-1.5 pt-1 border-t border-white/10 flex items-center justify-between text-[9px] text-slate-400">
+                <span className="text-emerald-400 flex items-center gap-1 font-bold">
+                  <Zap size={9} /> Click box for AI analysis
+                </span>
+              </div>
+
+              {/* Pointer arrow down to Mascot */}
+              <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-[#071324] border-b border-r border-amber-400/70 rotate-45" />
+            </div>
+          )}
+
+          {/* Interactive Official Ninja Mascot Character */}
+          <div
+            onClick={() => setIsOpen(true)}
+            className="relative flex flex-col items-center cursor-pointer group"
+          >
+            {/* Ground Contact Shadow */}
+            <motion.div
+              animate={{ scaleX: [0.85, 1.1, 0.85], opacity: [0.5, 0.8, 0.5] }}
+              transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
+              className="absolute -bottom-1 w-24 h-4 bg-black/90 rounded-full blur-sm z-0"
+            />
+
+            {/* Floating Energy Sparks */}
+            <motion.div
+              animate={{ opacity: [0.3, 0.9, 0.3], y: [0, -6, 0] }}
+              transition={{ repeat: Infinity, duration: 1.8 }}
+              className="absolute bottom-2 text-amber-400 opacity-80 pointer-events-none"
+            >
+              <Sparkles size={14} className="animate-spin text-amber-300" />
+            </motion.div>
+
+            {/* Mascot Character Avatar */}
+            <motion.div
+              animate={{ y: [0, -8, 0], rotate: [-1, 2, -1], scale: [1, 1.03, 1] }}
+              transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+              className="relative z-10 flex flex-col items-center filter drop-shadow-[0_16px_25px_rgba(0,0,0,0.9)]"
+            >
+              <div className="relative h-36 sm:h-44 w-auto group-hover:scale-105 transition-transform">
+                <img
+                  src="/official_ninja_mascot.png"
+                  alt="Commerce Gurukulam Official Ninja Turtle Mascot Avatar"
+                  className="h-full w-auto object-contain pointer-events-auto rounded-2xl"
+                />
+
+                {/* Status Badge */}
+                <div className="absolute top-0 right-0 bg-gradient-to-r from-emerald-500 to-amber-400 text-slate-950 font-black text-[8px] px-2 py-0.5 rounded-full uppercase flex items-center gap-0.5 shadow-md border border-amber-300">
+                  <Zap size={8} /> Ask Ninja
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Callout Action Tag */}
+            <span className="mt-1 relative z-10 text-[9px] font-black uppercase tracking-wider text-amber-300 bg-slate-950/90 border border-amber-400/40 px-2.5 py-0.5 rounded-full shadow-lg group-hover:bg-amber-400 group-hover:text-slate-950 transition">
+              Click to Talk with Ninja Sensei 🥷
+            </span>
+
           </div>
-          <div className="text-left pr-1">
-            <span className="block text-xs font-black uppercase tracking-wider leading-none">Chanakya AI</span>
-            <span className="text-[10px] text-slate-900 font-bold">Ask Admissions AI</span>
-          </div>
-        </button>
+
+        </div>
       )}
 
       {/* Chat Window Modal */}
       {isOpen && (
-        <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 w-[calc(100%-2rem)] sm:w-[400px] md:w-[440px] shadow-[0_0_60px_rgba(0,0,0,0.8)] rounded-2xl overflow-hidden border border-yellow-500/30 bg-[#07111e] backdrop-blur-xl flex flex-col h-[560px] md:h-[620px]">
+        <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 w-[calc(100%-2rem)] sm:w-[400px] md:w-[440px] shadow-[0_0_60px_rgba(0,0,0,0.8)] rounded-2xl overflow-hidden border border-emerald-500/30 bg-[#07111e] backdrop-blur-xl flex flex-col h-[560px] md:h-[620px]">
           {/* Header */}
-          <div className="bg-gradient-to-r from-slate-950 via-[#0b172a] to-slate-950 p-4 border-b border-yellow-500/20 flex items-center justify-between">
+          <div className="bg-gradient-to-r from-slate-950 via-[#0b172a] to-slate-950 p-4 border-b border-emerald-500/20 flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-400 to-emerald-400 p-0.5 shadow-[0_0_15px_rgba(234,179,8,0.3)]">
-                <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center text-yellow-400">
-                  <Bot size={22} />
+              <div className="relative flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-400 to-amber-400 p-0.5 shadow-[0_0_15px_rgba(16,185,129,0.4)]">
+                <div className="w-full h-full bg-slate-950 rounded-[10px] overflow-hidden flex items-center justify-center text-yellow-400">
+                  <img
+                    src="/ninja_turtle_mascot.jpg"
+                    alt="Ninja Turtle Mascot"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-400 rounded-full border-2 border-slate-950 animate-pulse" />
+                <span className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-emerald-400 rounded-full border-2 border-slate-950 animate-pulse" />
               </div>
               <div>
                 <h3 className="font-bold text-sm text-slate-100 flex items-center gap-1.5">
-                  Chanakya AI 2.0 <span className="text-[9px] bg-yellow-500/20 text-yellow-300 border border-yellow-400/30 px-1.5 py-0.2 rounded-md uppercase font-semibold">Pro Concierge</span>
+                  Ninja Sensei AI 🥷 <span className="text-[9px] bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 px-1.5 py-0.2 rounded-md uppercase font-semibold">Skill Mascot</span>
                 </h3>
                 <p className="text-[11px] text-emerald-400 font-medium flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full" /> Executive Admissions Advisor
+                  <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full" /> Gurukulam Commerce Advisor
                 </p>
               </div>
             </div>
@@ -294,11 +527,10 @@ Would you like to schedule a 1-on-1 screening call or connect on WhatsApp?`;
               <button
                 key={cat.id}
                 onClick={() => setActiveTab(cat.id)}
-                className={`px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider whitespace-nowrap transition cursor-pointer ${
-                  activeTab === cat.id
-                    ? 'bg-gradient-to-r from-yellow-400 to-emerald-400 text-slate-950 shadow-sm'
-                    : 'bg-slate-900 text-slate-400 hover:text-slate-200 border border-white/5'
-                }`}
+                className={`px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider whitespace-nowrap transition cursor-pointer ${activeTab === cat.id
+                  ? 'bg-gradient-to-r from-yellow-400 to-emerald-400 text-slate-950 shadow-sm'
+                  : 'bg-slate-900 text-slate-400 hover:text-slate-200 border border-white/5'
+                  }`}
               >
                 {cat.label}
               </button>
@@ -319,11 +551,10 @@ Would you like to schedule a 1-on-1 screening call or connect on WhatsApp?`;
                 )}
 
                 <div
-                  className={`max-w-[85%] rounded-2xl p-3.5 leading-relaxed ${
-                    msg.type === 'user'
-                      ? 'bg-gradient-to-r from-yellow-400 to-amber-400 text-slate-950 rounded-br-xs font-semibold shadow-md'
-                      : 'bg-slate-900/90 border border-slate-800 text-slate-200 rounded-bl-xs shadow-md'
-                  }`}
+                  className={`max-w-[85%] rounded-2xl p-3.5 leading-relaxed ${msg.type === 'user'
+                    ? 'bg-gradient-to-r from-yellow-400 to-amber-400 text-slate-950 rounded-br-xs font-semibold shadow-md'
+                    : 'bg-slate-900/90 border border-slate-800 text-slate-200 rounded-bl-xs shadow-md'
+                    }`}
                 >
                   {/* Rich Text Format formatting */}
                   <div className="space-y-1.5 whitespace-pre-wrap">

@@ -22,18 +22,37 @@ export const alertTickerMessages = [
 ];
 
 export const megaComboSkills = [
-  { id: 1, name: 'GST & E-Filing Portal', icon: 'FileText', category: 'Taxation', desc: 'Live GSTR-1, 3B, 2B Reconciliation & E-Way Bills on Gov Portal' },
-  { id: 2, name: 'Investment Banking', icon: 'Landmark', category: 'Valuation', desc: 'Institutional Pitch Books, Comps & M&A Transaction Structuring' },
-  { id: 3, name: 'Forensic Accounting', icon: 'SearchCheck', category: 'Audit', desc: 'Balance Sheet Red Flags, Fraud Detection & Anomaly Audits' },
-  { id: 4, name: 'Power BI & Dashboards', icon: 'BarChart3', category: 'Analytics', desc: 'Interactive Financial Reporting, DAX Math & Visual KPI Dashboards' },
-  { id: 5, name: 'Ind AS & US GAAP', icon: 'BookMarked', category: 'Accounting', desc: 'Cross-Border Accounting Standards, Revenue Recognition & Leases' },
-  { id: 6, name: 'Income Tax & ITR Filing', icon: 'ShieldAlert', category: 'Taxation', desc: 'ITR-1 to ITR-4 Computation, Chapter VI-A & Salary Tax Planning' },
-  { id: 7, name: 'Financial Modelling & DCF', icon: 'TrendingUp', category: 'Valuation', desc: '3-Statement Forecasting, WACC, DCF Valuation & Sensitivity Tables' },
-  { id: 8, name: 'Advanced Excel & Query', icon: 'Table', category: 'Analytics', desc: 'XLOOKUP, Power Query, Dynamic Array Formulas & Keyboard Shortcuts' },
-  { id: 9, name: 'AI Finance Prompting', icon: 'Bot', category: 'Future Tech', desc: 'Automate Annual SEC Filing Audits & Financial Summaries with AI' },
-  { id: 10, name: 'Tally Prime & Payroll', icon: 'Building', category: 'Accounting', desc: 'Company Setup, Voucher Entry, Inventory & BRS Reconciliation' },
-  { id: 11, name: 'Stock Market & Options', icon: 'PieChart', category: 'Markets', desc: 'Price Action Trading, Technical Indicators & Option Risk Hedging' },
-  { id: 12, name: 'FastTrack Exam Victory', icon: 'Zap', category: 'Academics', desc: '10-Year University Question Solutions & Semester Exam Cheat Sheets' }
+  // 1. ACCOUNTING
+  { id: 1, name: 'Accounting Fundamentals', icon: 'BookMarked', category: 'ACCOUNTING', desc: 'Core debit/credit principles, journal posting, ledger & trial balance finalization' },
+  { id: 2, name: 'Financial Statement Analysis', icon: 'FileText', category: 'ACCOUNTING', desc: 'Balance Sheet, P&L, Cash Flow analysis & key corporate performance ratios' },
+  { id: 3, name: 'Tally Prime + Payroll', icon: 'Building', category: 'ACCOUNTING', desc: 'Company setup, inventory vouchers, GST reconciliation & corporate payroll management' },
+  { id: 4, name: 'Accounting Compliances', icon: 'ShieldAlert', category: 'ACCOUNTING', desc: 'TDS/TCS deduction rules, statutory compliance filings & audit readiness' },
+
+  // 2. FINANCE
+  { id: 5, name: 'Working Capital Management', icon: 'Landmark', category: 'FINANCE', desc: 'Operating cycles, cash flow optimization & corporate inventory liquidity management' },
+  { id: 6, name: 'Capital Structure + Budgeting', icon: 'PieChart', category: 'FINANCE', desc: 'Cost of capital, debt vs equity mix, WACC & capital expenditure budgeting' },
+  { id: 7, name: 'Financial Modelling Foundation', icon: 'TrendingUp', category: 'FINANCE', desc: '3-Statement integrated financial forecasting & dynamic scenario modeling' },
+
+  // 3. VALUATION
+  { id: 8, name: 'Investment Banking Fundamentals', icon: 'Building', category: 'VALUATION', desc: 'M&A deal structuring, precedent transactions & institutional pitch books' },
+  { id: 9, name: 'IPO Fundamentals', icon: 'Zap', category: 'VALUATION', desc: 'DRHP filing mechanics, underwriting, pricing & public market listing process' },
+  { id: 10, name: 'Discounted Cash Flow Analysis (DCF) Modelling', icon: 'TrendingUp', category: 'VALUATION', desc: 'FCFF math, WACC calculation, terminal value & DCF intrinsic valuation' },
+
+  // 4. FUTURE SKILLS
+  { id: 11, name: 'AI Tools', icon: 'Bot', category: 'FUTURE SKILLS', desc: 'Next-gen AI tools for automated financial reporting & corporate data synthesis' },
+  { id: 12, name: 'AI Finance Prompting', icon: 'Sparkles', category: 'FUTURE SKILLS', desc: 'Custom prompt engineering for SEC filings, annual report audits & analysis' },
+
+  // 5. CAPITAL MARKET
+  { id: 13, name: 'Financial Markets Foundation', icon: 'TrendingUp', category: 'CAPITAL MARKET', desc: 'Equity, fixed income, money markets & derivatives market structure' },
+  { id: 14, name: 'Regulation & Compliance', icon: 'ShieldAlert', category: 'CAPITAL MARKET', desc: 'SEBI guidelines, insider trading norms & market regulatory compliance' },
+
+  // 6. ANALYTICS
+  { id: 15, name: 'Advanced Excel + Query', icon: 'Table', category: 'ANALYTICS', desc: 'XLOOKUP, INDEX-MATCH, Power Query automation & speed keyboard shortcuts' },
+  { id: 16, name: 'Power BI + Dashboard', icon: 'BarChart3', category: 'ANALYTICS', desc: 'Interactive data visualization, DAX measures & executive KPI dashboards' },
+
+  // 7. INTERVIEWS / CAREER PREPARATION
+  { id: 17, name: 'Mock Interviews', icon: 'Award', category: 'INTERVIEWS / CAREER PREPARATION', desc: '1-on-1 technical & HR mock interviews with practicing industry mentors' },
+  { id: 18, name: 'Interview Preparation (Practical)', icon: 'Award', category: 'INTERVIEWS / CAREER PREPARATION', desc: 'Resume portfolio building, LinkedIn optimization & live technical test prep' }
 ];
 
 export const mindTriggers = [

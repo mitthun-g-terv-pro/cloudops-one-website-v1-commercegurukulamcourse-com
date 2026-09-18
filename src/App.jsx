@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import CohortLaunchBanner from './components/CohortLaunchBanner';
 import MegaComboSection from './components/MegaComboSection';
 import Problem from './components/Problem';
-import CourseCatalog from './components/CourseCatalog';
 import FastTrackBanner from './components/FastTrackBanner';
 import ROICalculator from './components/ROICalculator';
 import MindsetComparison from './components/MindsetComparison';
@@ -19,6 +19,7 @@ import WhatsAppButton from './components/WhatsAppButton';
 function App() {
   const [isApplicationFormOpen, setIsApplicationFormOpen] = useState(false);
   const [selectedCourseForEnrollment, setSelectedCourseForEnrollment] = useState(null);
+  const [isAiAssistantOpen, setIsAiAssistantOpen] = useState(false);
 
   const handleOpenEnrollment = (course = null) => {
     setSelectedCourseForEnrollment(course);
@@ -44,14 +45,14 @@ function App() {
           }}
         />
 
+        {/* October 7 Cohort Launch & Early Bird Announcement Banner */}
+        <CohortLaunchBanner onEnrollClick={() => handleOpenEnrollment()} />
+
         {/* 12-in-1 Mega Commerce Combo Section (Inspired by GT Learning Poster) */}
         <MegaComboSection onEnrollClick={(course) => handleOpenEnrollment(course)} />
 
         {/* Mind-Trigger Problem: College Disconnect */}
         <Problem onApplyClick={() => handleOpenEnrollment()} />
-
-        {/* 30-Day Master Courses & FastTrack Skill Catalog */}
-        <CourseCatalog onEnrollClick={(course) => handleOpenEnrollment(course)} />
 
         {/* FastTrack Emergency Exam & Sprint Banner */}
         <FastTrackBanner onEnrollClick={(course) => handleOpenEnrollment(course)} />
@@ -85,8 +86,12 @@ function App() {
       {/* Real-time Student Enrollment Toast Notifications (FOMO Trigger) */}
       <LiveEnrollmentTicker onEnrollClick={() => handleOpenEnrollment()} />
 
-      {/* AI Assistant Chatbot */}
-      <AIAssistant onApplyClick={() => handleOpenEnrollment()} />
+      {/* Official Ninja Turtle Mascot AI Assistant Chatbot */}
+      <AIAssistant 
+        isOpen={isAiAssistantOpen}
+        setIsOpen={setIsAiAssistantOpen}
+        onApplyClick={() => handleOpenEnrollment()} 
+      />
 
       {/* Floating WhatsApp Action Button */}
       <WhatsAppButton />

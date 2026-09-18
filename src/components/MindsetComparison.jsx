@@ -13,7 +13,7 @@ export default function MindsetComparison({ onEnrollClick }) {
           </span>
 
           <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
-            Average College Student <br />
+            Average Commerce Student <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-amber-300 to-emerald-400">
               vs Commerce Gurukulam Graduate
             </span>
@@ -30,7 +30,7 @@ export default function MindsetComparison({ onEnrollClick }) {
           {/* Table Header Row */}
           <div className="grid grid-cols-12 bg-slate-900/90 border-b border-slate-800 p-4 sm:p-6 text-xs sm:text-sm font-extrabold tracking-wider uppercase">
             <div className="col-span-4 text-slate-400">Career Dimension</div>
-            <div className="col-span-4 text-red-400 border-l border-slate-800 pl-4">Average College Student</div>
+            <div className="col-span-4 text-red-400 border-l border-slate-800 pl-4">Average Commerce Student</div>
             <div className="col-span-4 text-emerald-400 border-l border-slate-800 pl-4 flex items-center gap-1">
               <Zap size={14} className="text-amber-400 fill-amber-400" /> Gurukulam Graduate
             </div>

@@ -6,7 +6,7 @@ import { heroStats } from '../data/content';
 export default function Hero({ onApplyClick, onExploreCourses }) {
   const textVideoRef = useRef(null);
   const sideVideoRef = useRef(null);
-  
+
   const [isTextVideoPlaying, setIsTextVideoPlaying] = useState(false);
   const [isSideVideoPlaying, setIsSideVideoPlaying] = useState(false);
   const [isSideMuted, setIsSideMuted] = useState(true);
@@ -58,13 +58,13 @@ export default function Hero({ onApplyClick, onExploreCourses }) {
     <section className="relative overflow-hidden pt-10 pb-20">
       {/* Background radial glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(245,158,11,0.12),_transparent_35%),radial-gradient(circle_at_85%_20%,_rgba(16,185,129,0.15),_transparent_30%),radial-gradient(circle_at_15%_70%,_rgba(139,92,246,0.12),_transparent_35%)]" />
-      
+
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
-          
+
           {/* Left Column: Mind-Manipulating Copywriting */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            
+
             {/* Top Student Urgency Badge */}
             <div className="mb-6 inline-flex flex-wrap items-center gap-2 rounded-full border border-amber-400/40 bg-amber-500/10 px-4 py-1.5 text-xs font-bold text-amber-300 shadow-[0_0_20px_rgba(245,158,11,0.2)]">
               <span className="flex h-2 w-2 relative">
@@ -85,7 +85,7 @@ export default function Hero({ onApplyClick, onExploreCourses }) {
             </h1>
 
             {/* HOVER-TO-PLAY VIDEO CONTAINER AROUND TEXT & BULLETS */}
-            <div 
+            <div
               onMouseEnter={handleTextHoverEnter}
               onMouseLeave={handleTextHoverLeave}
               className="mt-6 rounded-3xl border border-amber-400/30 bg-slate-900/60 p-6 transition-all duration-500 hover:border-amber-400 hover:bg-slate-900/90 hover:shadow-[0_0_35px_rgba(245,158,11,0.25)] group relative cursor-pointer overflow-hidden"
@@ -96,11 +96,10 @@ export default function Hero({ onApplyClick, onExploreCourses }) {
                   <span className={`h-2.5 w-2.5 rounded-full ${isTextVideoPlaying ? 'bg-emerald-400 animate-ping' : 'bg-amber-400'}`} />
                   {isTextVideoPlaying ? '▶ VIDEO REVEALED & PLAYING (MOVE MOUSE OUT TO STOP)' : '🎥 HOVER MOUSE HERE TO PLAY VIDEO'}
                 </span>
-                <span className={`text-[10px] font-extrabold px-2.5 py-0.5 rounded border transition ${
-                  isTextVideoPlaying 
-                    ? 'text-emerald-400 bg-emerald-500/20 border-emerald-500/40' 
-                    : 'text-amber-300 bg-amber-400/10 border-amber-400/30'
-                }`}>
+                <span className={`text-[10px] font-extrabold px-2.5 py-0.5 rounded border transition ${isTextVideoPlaying
+                  ? 'text-emerald-400 bg-emerald-500/20 border-emerald-500/40'
+                  : 'text-amber-300 bg-amber-400/10 border-amber-400/30'
+                  }`}>
                   {isTextVideoPlaying ? 'PLAYING VIDEO' : 'HOVER TO PLAY'}
                 </span>
               </div>
@@ -141,9 +140,7 @@ export default function Hero({ onApplyClick, onExploreCourses }) {
                     className="h-full w-full object-cover"
                   >
                     <source src="/videos/video.mp4" type="video/mp4" />
-                    <source src="/videos/overview.mp4" type="video/mp4" />
-                    <source src="/videos/demo.mp4" type="video/mp4" />
-                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4" />
+                    <source src="/videos/Commerce_updated_20260917170249.mp4" type="video/mp4" />
                   </video>
                 </div>
               </div>
@@ -152,15 +149,15 @@ export default function Hero({ onApplyClick, onExploreCourses }) {
 
             {/* Call to Action Buttons */}
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <a 
+              <a
                 href="#courses"
                 className="inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-amber-400 via-emerald-400 to-emerald-500 px-8 py-4 text-base font-extrabold text-slate-950 shadow-[0_0_35px_rgba(16,185,129,0.35)] transition hover:scale-105 hover:shadow-[0_0_45px_rgba(245,158,11,0.5)] cursor-pointer"
               >
                 Explore 30-Day Courses <ArrowRight size={20} />
               </a>
 
-              <button 
-                onClick={onApplyClick} 
+              <button
+                onClick={onApplyClick}
                 className="inline-flex items-center gap-2 rounded-full border border-amber-400/40 bg-amber-500/10 px-6 py-4 text-sm font-bold text-amber-300 transition hover:bg-amber-400/20 hover:border-amber-400/70 cursor-pointer"
               >
                 <Sparkles size={16} /> Claim Student Access Grant
@@ -176,20 +173,20 @@ export default function Hero({ onApplyClick, onExploreCourses }) {
           </motion.div>
 
           {/* Right Column: Interactive Hover-to-Play Video Preview Card */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }} 
-            animate={{ opacity: 1, scale: 1 }} 
-            transition={{ duration: 0.6, delay: 0.1 }} 
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
             className="relative"
           >
             <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-amber-500/20 via-emerald-500/20 to-cyan-500/20 blur-2xl opacity-60" />
-            
-            <div 
+
+            <div
               onMouseEnter={handleSideMouseEnter}
               onMouseLeave={handleSideMouseLeave}
               className="relative rounded-3xl border border-emerald-500/40 bg-[#061122]/90 p-5 md:p-7 shadow-2xl backdrop-blur-xl group cursor-pointer transition duration-300 hover:border-amber-400"
             >
-              
+
               {/* Header Badge */}
               <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
                 <div>
@@ -208,18 +205,71 @@ export default function Hero({ onApplyClick, onExploreCourses }) {
                   <p className="text-xs text-slate-300">3 Years of Theory ➔ Zero Practical Skills ➔ Struggling in Campus Placement Interviews</p>
                 </div>
 
-                {/* Gurukulam 30-Day Path */}
-                <div className="rounded-xl border border-emerald-500/40 bg-emerald-950/30 p-4 relative overflow-hidden">
-                  <div className="absolute top-0 right-0 bg-emerald-500 text-slate-950 text-[9px] font-black uppercase px-2 py-0.5 rounded-bl">
+                {/* Gurukulam Pathway */}
+                <div className="rounded-2xl border border-emerald-500/50 bg-gradient-to-br from-[#06182e] via-[#04101f] to-slate-950 p-4 relative overflow-hidden shadow-[0_0_40px_rgba(16,185,129,0.15)]">
+                  <div className="absolute top-0 right-0 bg-gradient-to-r from-emerald-500 to-amber-400 text-slate-950 text-[9px] font-black uppercase px-2.5 py-0.5 rounded-bl shadow-sm tracking-wider">
                     FASTTRACK SUCCESS
                   </div>
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-xs font-bold text-emerald-300 uppercase flex items-center gap-1">
-                      <Zap size={13} className="text-amber-400 fill-amber-400" /> Gurukulam 30-Day Path
+
+                  <div className="flex items-center justify-between mb-3 pr-24">
+                    <span className="text-xs font-black text-emerald-300 uppercase flex items-center gap-1.5 tracking-wider">
+                      <Zap size={14} className="text-amber-400 fill-amber-400 animate-pulse" /> Gurukulam Pathway
                     </span>
-                    <span className="text-xs font-black text-amber-300">Premier Corporate Roles</span>
+                    <span className="text-xs font-black text-amber-300 bg-amber-400/10 border border-amber-400/30 px-2 py-0.5 rounded-md">
+                      Premier Corporate Roles
+                    </span>
                   </div>
-                  <p className="text-xs text-slate-200 font-medium">30 Days Practical Skills ➔ Live GST/Tally Portfolio ➔ High-Growth Corporate & Big-4 Placement Edge</p>
+
+                  {/* Dual Pathway Cards */}
+                  <div className="space-y-3 mt-3">
+                    
+                    {/* Option 1: College Students */}
+                    <div className="rounded-xl bg-slate-900/90 border border-emerald-500/30 p-3 hover:border-emerald-400/60 transition group">
+                      <div className="flex items-center justify-between flex-wrap gap-1">
+                        <span className="text-xs font-bold text-slate-100 flex items-center gap-1.5">
+                          <span className="text-sm">🎓</span> For College Students
+                        </span>
+                        <span className="text-[10px] font-extrabold text-emerald-300 bg-emerald-500/10 border border-emerald-400/30 px-2 py-0.5 rounded-full">
+                          3-Month Online Career Program
+                        </span>
+                      </div>
+                      <p className="text-xs text-slate-300 mt-1.5 font-medium leading-relaxed">
+                        Learn practical Commerce skills alongside your degree.
+                      </p>
+                      <div className="mt-2.5 flex flex-wrap items-center gap-1.5 text-[10px] font-semibold text-emerald-300/90">
+                        <span className="bg-slate-950/80 px-2 py-0.5 rounded border border-emerald-500/20">Online</span>
+                        <span>•</span>
+                        <span className="bg-slate-950/80 px-2 py-0.5 rounded border border-emerald-500/20">Mentorship</span>
+                        <span>•</span>
+                        <span className="bg-slate-950/80 px-2 py-0.5 rounded border border-emerald-500/20">Projects</span>
+                        <span>•</span>
+                        <span className="bg-slate-950/80 px-2 py-0.5 rounded border border-emerald-500/20">Career Support</span>
+                      </div>
+                    </div>
+
+                    {/* Option 2: Graduates & Professionals */}
+                    <div className="rounded-xl bg-slate-900/90 border border-amber-500/30 p-3 hover:border-amber-400/60 transition group">
+                      <div className="flex items-center justify-between flex-wrap gap-1">
+                        <span className="text-xs font-bold text-slate-100 flex items-center gap-1.5">
+                          <span className="text-sm">💼</span> For Graduates & Working Professionals
+                        </span>
+                        <span className="text-[10px] font-extrabold text-amber-300 bg-amber-400/10 border border-amber-400/30 px-2 py-0.5 rounded-full">
+                          3-Month Professional Diploma
+                        </span>
+                      </div>
+                      <p className="text-xs text-slate-300 mt-1.5 font-medium leading-relaxed">
+                        Upgrade your skills with practical, industry-focused training.
+                      </p>
+                      <div className="mt-2.5 flex flex-wrap items-center gap-1.5 text-[10px] font-semibold text-amber-300/90">
+                        <span className="bg-slate-950/80 px-2 py-0.5 rounded border border-amber-500/20">Centre-Based + Hybrid</span>
+                        <span>•</span>
+                        <span className="bg-slate-950/80 px-2 py-0.5 rounded border border-amber-500/20">1-to-1 Mentorship</span>
+                        <span>•</span>
+                        <span className="bg-slate-950/80 px-2 py-0.5 rounded border border-amber-500/20">Career Accelerator</span>
+                      </div>
+                    </div>
+
+                  </div>
                 </div>
 
               </div>
