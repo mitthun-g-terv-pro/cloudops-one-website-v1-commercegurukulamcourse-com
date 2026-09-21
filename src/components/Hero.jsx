@@ -71,7 +71,7 @@ export default function Hero({ onApplyClick, onExploreCourses }) {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
               </span>
-              <span>🔥 ADMISSIONS OPEN FOR NEXT 30-DAY COHORT</span>
+              <span>🔥 ADMISSIONS OPEN FOR <span className="bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-400 text-slate-950 font-black px-2 py-0.5 rounded uppercase tracking-wider mx-1 shadow-sm">AIRA</span> 3-MONTH PROGRAM</span>
             </div>
 
             {/* Main Headline */}
@@ -229,8 +229,8 @@ export default function Hero({ onApplyClick, onExploreCourses }) {
                         <span className="text-xs font-bold text-slate-100 flex items-center gap-1.5">
                           <span className="text-sm">🎓</span> For College Students
                         </span>
-                        <span className="text-[10px] font-extrabold text-emerald-300 bg-emerald-500/10 border border-emerald-400/30 px-2 py-0.5 rounded-full">
-                          3-Month Online Career Program
+                        <span className="text-[10px] font-extrabold text-slate-950 bg-gradient-to-r from-emerald-300 via-teal-200 to-emerald-400 border border-emerald-300 px-2.5 py-0.5 rounded-full shadow-sm flex items-center gap-1">
+                          <span className="font-black bg-slate-950 text-amber-300 px-1 rounded text-[9px]">AIRA</span> 3-Month Online Career Program
                         </span>
                       </div>
                       <p className="text-xs text-slate-300 mt-1.5 font-medium leading-relaxed">
@@ -253,8 +253,8 @@ export default function Hero({ onApplyClick, onExploreCourses }) {
                         <span className="text-xs font-bold text-slate-100 flex items-center gap-1.5">
                           <span className="text-sm">💼</span> For Graduates & Working Professionals
                         </span>
-                        <span className="text-[10px] font-extrabold text-amber-300 bg-amber-400/10 border border-amber-400/30 px-2 py-0.5 rounded-full">
-                          3-Month Professional Diploma
+                        <span className="text-[10px] font-extrabold text-slate-950 bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-400 border border-amber-300 px-2.5 py-0.5 rounded-full shadow-sm flex items-center gap-1">
+                          <span className="font-black bg-slate-950 text-amber-300 px-1 rounded text-[9px]">AIRA</span> 3-Month Professional Diploma
                         </span>
                       </div>
                       <p className="text-xs text-slate-300 mt-1.5 font-medium leading-relaxed">

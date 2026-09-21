@@ -54,7 +54,7 @@ export default function CohortLaunchBanner({ onEnrollClick }) {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500" />
             </span>
-            Next Residential & Online Batch Admissions
+            <span>AIRA 3-Month Program Admissions</span>
           </div>
 
           <div className="text-xs text-emerald-400 font-bold bg-emerald-500/10 border border-emerald-400/30 px-3 py-1 rounded-full flex items-center gap-1.5">
@@ -67,8 +67,11 @@ export default function CohortLaunchBanner({ onEnrollClick }) {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white leading-tight">
             Your Commerce Career Starts <span className="bg-gradient-to-r from-amber-300 via-yellow-200 to-emerald-400 bg-clip-text text-transparent">October 7</span>
           </h2>
-          <p className="mt-3 text-base sm:text-lg font-semibold text-slate-300">
-            3 Months of Industry-Focused Learning
+          <p className="mt-3 text-base sm:text-lg font-bold text-slate-200 flex items-center justify-center gap-2 flex-wrap">
+            <span>3 Months of Industry-Focused Learning with</span>
+            <span className="bg-gradient-to-r from-amber-300 via-yellow-200 to-emerald-400 text-slate-950 font-black text-lg px-3 py-0.5 rounded-md shadow-md uppercase tracking-wider border border-amber-200">
+              AIRA
+            </span>
           </p>
         </div>
 
@@ -158,7 +161,7 @@ export default function CohortLaunchBanner({ onEnrollClick }) {
                   Early Bird Offer
                 </span>
                 <h3 className="text-lg font-black text-amber-300 mt-2">
-                  Valid until September 13
+                  Valid until September 30
                 </h3>
                 <p className="text-xs text-slate-400 mt-1 leading-relaxed">
                   Unlock tuition grant discount & priority 1-on-1 CFO mentorship slot.

@@ -226,12 +226,13 @@ Commerce Gurukulam`;
                   required
                   className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/80 border border-slate-700 text-white focus:outline-none focus:border-emerald-400 transition text-sm font-medium"
                 >
+                  <option value="AIRA 3-Month Online Career Program">AIRA 3-Month Online Career Program</option>
+                  <option value="AIRA 3-Month Professional Diploma (Hybrid & Centre-Based)">AIRA 3-Month Professional Diploma (Hybrid & Centre-Based)</option>
                   <option value="30-Day Practical GST, Income Tax & E-Filing Masterclass">30-Day Practical GST, Income Tax & E-Filing Masterclass</option>
                   <option value="30-Day Tally Prime + Advanced Financial Excel Mastery">30-Day Tally Prime + Advanced Excel Mastery</option>
                   <option value="30-Day Wall Street Financial Modeling & DCF Valuation">30-Day Wall Street Financial Modeling & DCF Valuation</option>
                   <option value="30-Day Technical Analysis & Stock Market Masterclass">30-Day Stock Market & Options Trading Masterclass</option>
                   <option value="7-Day FastTrack Corporate Accounting Exam Prep">7-Day FastTrack Semester Exam Prep</option>
-                  <option value="48-Hour Corporate Excel Speed Bootcamp">48-Hour Corporate Excel Speed Bootcamp</option>
                 </select>
               </div>
 
