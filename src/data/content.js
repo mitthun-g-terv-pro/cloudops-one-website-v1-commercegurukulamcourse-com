@@ -8,7 +8,7 @@ export const navItems = [
 ];
 
 export const heroStats = [
-  { label: 'College Students Trained', value: '14,200+' },
+  { label: 'Students Trained', value: '14,200+' },
   { label: 'Practical Job Placement Edge', value: '94.8%' },
   { label: 'Partner Institutions', value: '180+ Colleges' },
   { label: 'Hands-on Corporate Projects', value: '100% Live' }
