@@ -28,18 +28,18 @@ export default function CourseCatalog({ onEnrollClick }) {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-emerald-300">
             <Zap size={14} className="text-amber-400" />
-            30-DAY & FASTTRACK SKILL CATALOG
+            AIRA 3-MONTH PROGRAM TRACKS
           </span>
 
           <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
             Designed Exclusively For <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-emerald-300 to-cyan-300">
-              College Commerce Students
+              Commerce Students & Graduates
             </span>
           </h2>
 
           <p className="mt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
-            Stop waiting until your final year to realize college doesn't teach practical skills. Choose your 30-Day course or 7-Day FastTrack sprint below and build your high-paid resume today!
+            Stop waiting until your final year to realize college doesn't teach practical skills. Choose your AIRA 3-Month specialization track below and build your high-paid resume today!
           </p>
         </div>
 

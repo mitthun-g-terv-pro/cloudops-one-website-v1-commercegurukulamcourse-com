@@ -20,7 +20,7 @@ export default function MindsetComparison({ onEnrollClick }) {
           </h2>
 
           <p className="mt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
-            See the exact difference between relying on 3 years of college lectures vs taking a 30-Day practical Gurukulam sprint.
+            See the exact difference between relying on 3 years of college lectures vs mastering the AIRA 3-Month Program.
           </p>
         </div>
 

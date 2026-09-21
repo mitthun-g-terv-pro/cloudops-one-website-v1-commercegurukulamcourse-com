@@ -1,8 +1,8 @@
 export const navItems = [
-  { id: 'combo', label: '⚡ 12-in-1 Combo' },
-  { id: 'courses', label: '30-Day Courses' },
-  { id: 'why', label: 'The Advantage' },
-  { id: 'roi', label: 'Skill Calculator' },
+  { id: 'combo', label: '⚡ AIRA 3-Month Bundle' },
+  { id: 'courses', label: 'AIRA 3-Month Program' },
+  { id: 'why', label: 'The AIRA Advantage' },
+  { id: 'roi', label: 'AIRA Skill Calculator' },
   { id: 'testimonials', label: 'Student Proof' },
   { id: 'faq', label: 'FAQs' }
 ];
@@ -15,44 +15,32 @@ export const heroStats = [
 ];
 
 export const alertTickerMessages = [
-  "🔥 Limited Time: 12-in-1 Mega Commerce Combo Active — Save 90% with code 'COLLEGE70'",
-  "⚡ 94% of Commerce Graduates fail practical GST interview rounds — Master all 12 skills!",
+  "🔥 Course Launch: October 7 | Early Bird Offer Valid Until September 30 — Save Big With Code 'COLLEGE70'",
+  "⚡ 94% of Commerce Graduates fail practical GST interview rounds — Master AIRA 3-Month Program!",
   "🎓 Joined by students from SRCC, Christ University, St. Xavier's, Loyola, Hindu College & 180+ institutions!",
-  "🚀 FastTrack Exam Bootcamps & Corporate Bundles starting this Monday!"
+  "🚀 AIRA 3-Month Online & Professional Diploma Cohorts Launching October 7!"
 ];
 
 export const megaComboSkills = [
-  // 1. ACCOUNTING
-  { id: 1, name: 'Accounting Fundamentals', icon: 'BookMarked', category: 'ACCOUNTING', desc: 'Core debit/credit principles, journal posting, ledger & trial balance finalization' },
-  { id: 2, name: 'Financial Statement Analysis', icon: 'FileText', category: 'ACCOUNTING', desc: 'Balance Sheet, P&L, Cash Flow analysis & key corporate performance ratios' },
-  { id: 3, name: 'Tally Prime + Payroll', icon: 'Building', category: 'ACCOUNTING', desc: 'Company setup, inventory vouchers, GST reconciliation & corporate payroll management' },
-  { id: 4, name: 'Accounting Compliances', icon: 'ShieldAlert', category: 'ACCOUNTING', desc: 'TDS/TCS deduction rules, statutory compliance filings & audit readiness' },
+  // 1. ACCOUNTING & TAXATION (MONTH 1)
+  { id: 1, name: 'Accounting Fundamentals', icon: 'BookMarked', category: 'AIRA MONTH 1', desc: 'Core debit/credit principles, journal posting, ledger & trial balance finalization' },
+  { id: 2, name: 'Financial Statement Analysis', icon: 'FileText', category: 'AIRA MONTH 1', desc: 'Balance Sheet, P&L, Cash Flow analysis & key corporate performance ratios' },
+  { id: 3, name: 'Tally Prime + Corporate Payroll', icon: 'Building', category: 'AIRA MONTH 1', desc: 'Company setup, inventory vouchers, GST reconciliation & corporate payroll management' },
+  { id: 4, name: 'Live GST & Income Tax Filing', icon: 'ShieldAlert', category: 'AIRA MONTH 1', desc: 'GSTR-1, 3B, 2B recon, ITR-1 to 4 portal filing, TDS/TCS rules & audit readiness' },
 
-  // 2. FINANCE
-  { id: 5, name: 'Working Capital Management', icon: 'Landmark', category: 'FINANCE', desc: 'Operating cycles, cash flow optimization & corporate inventory liquidity management' },
-  { id: 6, name: 'Capital Structure + Budgeting', icon: 'PieChart', category: 'FINANCE', desc: 'Cost of capital, debt vs equity mix, WACC & capital expenditure budgeting' },
-  { id: 7, name: 'Financial Modelling Foundation', icon: 'TrendingUp', category: 'FINANCE', desc: '3-Statement integrated financial forecasting & dynamic scenario modeling' },
+  // 2. FINANCIAL MODELING & VALUATION (MONTH 2)
+  { id: 5, name: 'Working Capital & Liquidity', icon: 'Landmark', category: 'AIRA MONTH 2', desc: 'Operating cycles, cash flow optimization & corporate inventory liquidity management' },
+  { id: 6, name: 'Capital Structure & WACC', icon: 'PieChart', category: 'AIRA MONTH 2', desc: 'Cost of capital, debt vs equity mix, WACC & capital expenditure budgeting' },
+  { id: 7, name: '3-Statement Financial Modeling', icon: 'TrendingUp', category: 'AIRA MONTH 2', desc: '3-Statement integrated financial forecasting & dynamic scenario modeling' },
+  { id: 8, name: 'DCF Intrinsic Valuation', icon: 'TrendingUp', category: 'AIRA MONTH 2', desc: 'FCFF math, WACC calculation, terminal value & DCF intrinsic valuation' },
+  { id: 9, name: 'Wall Street M&A & LBO Deals', icon: 'Building', category: 'AIRA MONTH 2', desc: 'M&A deal structuring, precedent transactions, LBO waterfalls & institutional pitch books' },
 
-  // 3. VALUATION
-  { id: 8, name: 'Investment Banking Fundamentals', icon: 'Building', category: 'VALUATION', desc: 'M&A deal structuring, precedent transactions & institutional pitch books' },
-  { id: 9, name: 'IPO Fundamentals', icon: 'Zap', category: 'VALUATION', desc: 'DRHP filing mechanics, underwriting, pricing & public market listing process' },
-  { id: 10, name: 'Discounted Cash Flow Analysis (DCF) Modelling', icon: 'TrendingUp', category: 'VALUATION', desc: 'FCFF math, WACC calculation, terminal value & DCF intrinsic valuation' },
-
-  // 4. FUTURE SKILLS
-  { id: 11, name: 'AI Tools', icon: 'Bot', category: 'FUTURE SKILLS', desc: 'Next-gen AI tools for automated financial reporting & corporate data synthesis' },
-  { id: 12, name: 'AI Finance Prompting', icon: 'Sparkles', category: 'FUTURE SKILLS', desc: 'Custom prompt engineering for SEC filings, annual report audits & analysis' },
-
-  // 5. CAPITAL MARKET
-  { id: 13, name: 'Financial Markets Foundation', icon: 'TrendingUp', category: 'CAPITAL MARKET', desc: 'Equity, fixed income, money markets & derivatives market structure' },
-  { id: 14, name: 'Regulation & Compliance', icon: 'ShieldAlert', category: 'CAPITAL MARKET', desc: 'SEBI guidelines, insider trading norms & market regulatory compliance' },
-
-  // 6. ANALYTICS
-  { id: 15, name: 'Advanced Excel + Query', icon: 'Table', category: 'ANALYTICS', desc: 'XLOOKUP, INDEX-MATCH, Power Query automation & speed keyboard shortcuts' },
-  { id: 16, name: 'Power BI + Dashboard', icon: 'BarChart3', category: 'ANALYTICS', desc: 'Interactive data visualization, DAX measures & executive KPI dashboards' },
-
-  // 7. INTERVIEWS / CAREER PREPARATION
-  { id: 17, name: 'Mock Interviews', icon: 'Award', category: 'INTERVIEWS / CAREER PREPARATION', desc: '1-on-1 technical & HR mock interviews with practicing industry mentors' },
-  { id: 18, name: 'Interview Preparation (Practical)', icon: 'Award', category: 'INTERVIEWS / CAREER PREPARATION', desc: 'Resume portfolio building, LinkedIn optimization & live technical test prep' }
+  // 3. AI & AUDIT ANALYTICS (MONTH 3)
+  { id: 10, name: 'AI Finance Prompt Engineering', icon: 'Bot', category: 'AIRA MONTH 3', desc: 'Custom prompt engineering for SEC filings, annual report audits & rapid synthesis' },
+  { id: 11, name: 'AI Forensic Audit & SEC Extraction', icon: 'Sparkles', category: 'AIRA MONTH 3', desc: 'Next-gen AI tools for automated financial reporting & corporate fraud detection' },
+  { id: 12, name: 'Advanced Excel & Power Query', icon: 'Table', category: 'AIRA MONTH 3', desc: 'XLOOKUP, INDEX-MATCH, Power Query automation & speed keyboard shortcuts' },
+  { id: 13, name: 'Power BI Executive Dashboards', icon: 'BarChart3', category: 'AIRA MONTH 3', desc: 'Interactive data visualization, DAX measures & executive KPI dashboards' },
+  { id: 14, name: 'Mock Interviews & Boardroom Pitch', icon: 'Award', category: 'CAREER ACCELERATOR', desc: '1-on-1 technical mock interviews, boardroom pitch defense & resume portfolio building' }
 ];
 
 export const mindTriggers = [
@@ -60,7 +48,7 @@ export const mindTriggers = [
     icon: 'AlertTriangle',
     title: 'The College Degree Lie',
     headline: 'Your College Syllabus is 15 Years Outdated.',
-    description: 'Professors teach textbook definitions from 2008. But Wall Street, Big-4, and Top Corporates hire for live Tally Prime, GST filing, Excel Financial Models, and Tax Structuring. Without practical mastery, your degree is just a paper weight.',
+    description: 'Professors teach textbook definitions from 2008. But Wall Street, Big-4, and Top Corporates hire for live Tally Prime, GST portal filing, Excel Financial Models, and Tax Structuring. Without practical mastery, your degree is just paper.',
     highlight: '90% of commerce grads get rejected because they cannot build a single live Excel model.'
   },
   {
@@ -72,18 +60,18 @@ export const mindTriggers = [
   },
   {
     icon: 'Zap',
-    title: 'The 30-Day Shortcut',
+    title: 'The AIRA 3-Month Solution',
     headline: 'Master What Colleges Fail to Teach in 3 Years.',
-    description: 'In just 30 days or 7 FastTrack days, Commerce Gurukulam rewires your brain with battle-tested industry skills, institutional deal decks, and C-Suite portfolio projects that make recruiters beg to hire you.',
+    description: 'In the AIRA 3-Month Program, Commerce Gurukulam rewires your brain with battle-tested industry skills, institutional deal decks, and C-Suite portfolio projects that make recruiters beg to hire you.',
     highlight: 'Zero useless homework. 100% portfolio-building execution.'
   }
 ];
 
 export const courseCategories = [
-  { id: 'all', label: '🔥 All Programs' },
-  { id: '30day', label: '🏆 30-Day Master Courses' },
-  { id: 'fasttrack', label: '⚡ FastTrack Sprints (3-7 Days)' },
-  { id: 'exam', label: '🎓 College Exam & CA Bootcamps' }
+  { id: 'all', label: '🔥 All AIRA 3-Month Tracks' },
+  { id: 'online', label: '🎓 AIRA 3-Month Online Career Program' },
+  { id: 'diploma', label: '🏢 AIRA 3-Month Professional Diploma' },
+  { id: 'lbo', label: '🏛️ AIRA Wall Street LBO & Valuation Track' }
 ];
 
 export const courses = [
@@ -241,66 +229,66 @@ export const courses = [
 ];
 
 export const megaComboData = {
-  title: '12-in-1 Mega Commerce Skill Bundle',
-  subtitle: 'The Ultimate All-Access Commerce Skill Package for Undergrads',
-  totalCoursesCount: 12,
-  description: 'Get lifetime access to all 6 core 30-Day Masterclasses + 6 FastTrack Exam & Excel Sprints in one comprehensive enrollment.',
+  title: 'AIRA 3-Month All-Access Executive Bundle',
+  subtitle: 'The Complete 3-Month Industry Skill Mastery Program for Commerce Students & Graduates',
+  totalCoursesCount: 14,
+  description: 'Get complete 3-Month access to all Month 1 (GST & Tax), Month 2 (Financial Modeling & Valuation), and Month 3 (AI & Audit Analytics) modules in one unified enrollment.',
   highlights: [
-    'Access to all 12 Core & FastTrack Masterclasses',
-    'ISO Certified Verifiable Certificates for all 12 modules',
+    'Complete Access to AIRA 3-Month Online & Professional Diploma Modules',
+    'ISO Certified Employer-Verifiable Certificates for All Modules',
     '50+ Downloadable Corporate Excel Templates & Financial Models',
-    'Exclusive Entry to Live Mentor Q&A & Interview Prep Rooms',
-    'Direct Placement Referral Pipeline to 100+ Partner Firms'
+    'Exclusive Entry to Live Boardroom Pitch Rooms & 1-on-1 Mentorship',
+    'Direct Placement Referral Pipeline to Top Corporate Partners'
   ]
 };
 
 export const faqs = [
   {
-    question: 'What is included in the 12-in-1 Mega Commerce Skill Bundle?',
-    answer: 'The 12-in-1 Mega Bundle gives you all 12 core commerce master modules: GST Filing, Investment Banking & M&A, Forensic Accounting, Power BI, Ind AS & US GAAP, Income Tax & ITR, Financial Modeling & DCF, Advanced Excel, AI Prompting, Tally Prime, Stock Market Options, and FastTrack Semester Exam Prep!'
+    question: 'What is the AIRA 3-Month Program?',
+    answer: 'AIRA (Artificial Intelligence, Reporting & Analytics) is Commerce Gurukulam’s flagship 3-Month industry program. It covers Month 1 (Practical GST, Income Tax & Tally Prime), Month 2 (Wall Street Financial Modeling, DCF & LBO Deals), and Month 3 (AI Finance Prompting, SEC Extractions & Power BI Dashboards).'
   },
   {
-    question: 'Are these courses suitable for complete beginners in college?',
-    answer: 'Absolutely! All our courses and the 12-in-1 bundle are built step-by-step specifically for college students. We start from ground zero and guide you until you are building real corporate files.'
+    question: 'What is the difference between AIRA Online and AIRA Professional Diploma?',
+    answer: 'The AIRA 3-Month Online Program offers flexible live interactive online sessions designed for college students alongside their degree. The AIRA 3-Month Professional Diploma offers hybrid & center-based immersive training, executive CFO mentorship, boardroom pitch defenses, and direct placement referrals.'
   },
   {
-    question: 'How do 30-Day Courses and FastTrack Courses work alongside college classes?',
-    answer: 'All sessions require only 1 to 1.5 hours daily. You get lifetime access to recorded video modules, downloadable Excel sheets, live Q&A mentor rooms, and flexible schedules so your college attendance is never affected.'
+    question: 'Are these modules suitable for complete beginners in college?',
+    answer: 'Absolutely! AIRA is structured step-by-step from ground zero. We start from foundational debit/credit principles and lead you all the way to building institutional valuation decks and AI audit bots.'
   },
   {
     question: 'Will I get an official government / corporate recognized certificate?',
-    answer: 'Yes! Every course includes an ISO-certified, employer-verifiable Certificate of Completion with a unique QR code and portfolio link that you can directly add to your LinkedIn profile and resume.'
+    answer: 'Yes! Every graduate of the AIRA 3-Month Program receives an ISO 9001:2015 certified, employer-verifiable Certificate of Practical Execution equipped with a unique QR verification code for resumes and LinkedIn.'
   },
   {
     question: 'What is the 100% Satisfaction Guarantee policy?',
-    answer: 'We are so confident in our practical training that if you complete the first 7 days of any course or bundle and feel it hasn’t upgraded your practical skills, we will resolve your concerns with zero hassle.'
+    answer: 'We are so confident in AIRA’s practical outcome that if you complete the first 14 days of the program and feel it hasn’t upgraded your practical skills, we offer a 100% money-back guarantee.'
   },
   {
-    question: 'How do I apply for the College Student Access Grant?',
-    answer: 'Simply click "Enroll Now" on any course card or click the "Claim 12-Course Bundle" button. Select your college details in the application form to claim instant student enrollment!'
+    question: 'How do I apply for the October 7 AIRA Early Bird Grant?',
+    answer: 'Simply click "Enroll Now" or "Claim Student Access Grant", select your college status in the application form, and apply the Early Bird code COLLEGE70 before September 30!'
   }
 ];
 
 export const roiMetrics = {
-  avgPlacementTime: '24 Days Post Course',
-  moneyBackGuaranteeDays: '30 Days 100% Refund'
+  avgPlacementTime: '24 Days Post Program',
+  moneyBackGuaranteeDays: '30 Days 100% Guarantee'
 };
 
 export const mindsetComparison = [
   {
     feature: 'Practical Industry Skills',
     averageStudent: '❌ Zero (Only knows textbook definitions)',
-    gurukulamStudent: '✅ 100% Live (Files GST, builds DCF, operates Tally)'
+    gurukulamStudent: '✅ AIRA Master (Files GST, builds DCF models, operates Tally)'
   },
   {
     feature: 'Excel & Data Mastery',
     averageStudent: '❌ Uses mouse for basic table borders',
-    gurukulamStudent: '✅ Keyboard-only speed analyst (XLOOKUP, Macros, Dashboards)'
+    gurukulamStudent: '✅ Keyboard-only speed analyst (XLOOKUP, Power Query, Power BI)'
   },
   {
     feature: 'Resume & Portfolio',
     averageStudent: '❌ Plain PDF with generic hobbies & college grades',
-    gurukulamStudent: '✅ Verified Portfolio with 5 Live Financial Project Decks'
+    gurukulamStudent: '✅ AIRA Verified Portfolio with 5 Live Financial Deal Decks'
   },
   {
     feature: 'Campus Placement Confidence',
@@ -310,45 +298,45 @@ export const mindsetComparison = [
   {
     feature: 'Career Placement Outcome',
     averageStudent: '❌ Stuck in basic data entry & low growth roles',
-    gurukulamStudent: '✅ High-growth Investment Banking, Tax Consulting & Corporate Roles'
+    gurukulamStudent: '✅ High-growth Investment Banking, Corporate Tax & Big-4 Roles'
   }
 ];
 
 export const liveStudentNotifications = [
-  { name: 'Priya Sharma', college: 'SRCC Delhi', course: '12-in-1 Mega Commerce Skill Bundle', time: '2 mins ago' },
-  { name: 'Rahul Verma', college: 'Christ University Bangalore', course: '30-Day Wall Street Financial Modeling', time: '5 mins ago' },
-  { name: 'Aditya Patel', college: 'St. Xavier’s Mumbai', course: '12-in-1 Mega Commerce Skill Bundle', time: '8 mins ago' },
-  { name: 'Sneha K.', college: 'Loyola College Chennai', course: '7-Day FastTrack B.Com Exam Prep', time: '12 mins ago' },
-  { name: 'Karan Mehta', college: 'NMIMS Mumbai', course: '30-Day Tally Prime + Advanced Excel', time: '15 mins ago' },
-  { name: 'Ananya Roy', college: 'Hindu College Delhi', course: '12-in-1 Mega Commerce Skill Bundle', time: '18 mins ago' }
+  { name: 'Priya Sharma', college: 'SRCC Delhi', course: 'AIRA 3-Month Online Career Program', time: '2 mins ago' },
+  { name: 'Rahul Verma', college: 'Christ University Bangalore', course: 'AIRA Wall Street LBO & Valuation Track', time: '5 mins ago' },
+  { name: 'Aditya Patel', college: 'St. Xavier’s Mumbai', course: 'AIRA 3-Month Professional Diploma', time: '8 mins ago' },
+  { name: 'Sneha K.', college: 'Loyola College Chennai', course: 'AIRA 3-Month Online Career Program', time: '12 mins ago' },
+  { name: 'Karan Mehta', college: 'NMIMS Mumbai', course: 'AIRA 3-Month Professional Diploma', time: '15 mins ago' },
+  { name: 'Ananya Roy', college: 'Hindu College Delhi', course: 'AIRA 3-Month Online Career Program', time: '18 mins ago' }
 ];
 
 export const studentTestimonials = [
   {
     name: 'Aakash R.',
     college: 'B.Com (Hons) Final Year, Delhi University',
-    courseTaken: '12-in-1 Mega Commerce Skill Bundle',
+    courseTaken: 'AIRA 3-Month Online Career Program',
     outcomeBefore: 'Rejected in 3 campus drives',
     outcomeAfter: 'Landed Analyst Role at EY',
-    quote: 'My college taught accounting theory for 3 years, but I couldn’t build a basic DCF model or file GST. In the 12-in-1 Mega Combo, I learned Financial Modeling, Power BI, and GST filing in 30 days. The EY interview partner was blown away!',
+    quote: 'My college taught accounting theory for 3 years, but I couldn’t build a basic DCF model or file GST. In the AIRA 3-Month Program, I mastered Financial Modeling, Power BI, and GST filing. The EY interview partner was blown away!',
     image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80'
   },
   {
     name: 'Meera Nambiar',
     college: 'BBA Finance, Christ University',
-    courseTaken: '30-Day Practical GST & Income Tax Masterclass',
+    courseTaken: 'AIRA 3-Month Professional Diploma',
     outcomeBefore: 'Struggling for unpaid internships',
-    outcomeAfter: 'Got Corporate Tax Consultancy Internship',
-    quote: 'During my interview at a top tax consultancy, they asked if I knew live GSTR-3B filing. Thanks to Gurukulam, I opened the portal setup and explained ITC reconciliation line by line. I got hired on the spot!',
+    outcomeAfter: 'Got Corporate Tax Consultancy Role',
+    quote: 'During my interview at a top tax consultancy, they asked if I knew live GSTR-3B filing. Thanks to AIRA, I opened the portal setup and explained ITC reconciliation line by line. I got hired on the spot!',
     image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80'
   },
   {
     name: 'Siddharth Jain',
     college: 'B.Com 2nd Year & CA Aspirant',
-    courseTaken: '7-Day FastTrack Exam Prep + 48-Hr Excel Sprint',
+    courseTaken: 'AIRA Wall Street LBO & Valuation Accelerator',
     outcomeBefore: 'Scored 58% in 1st Semester',
-    outcomeAfter: 'Scored 84% in Semester Exam & Built Dashboards',
-    quote: 'The 7-Day FastTrack course saved my semester. The mind maps and question predictions were 100% accurate. Plus, the 48-Hr Excel course helped me build dashboards that got me a remote research role!',
+    outcomeAfter: 'Scored 84% in Semester Exam & Built Pitch Decks',
+    quote: 'AIRA saved my career direction. The 3-statement modeling and LBO waterfall analysis gave me real deal experience that got me a financial research role before graduation!',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80'
   }
 ];

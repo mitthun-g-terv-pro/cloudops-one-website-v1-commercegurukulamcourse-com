@@ -3,42 +3,42 @@ import { Calculator, TrendingUp, Award, ArrowRight, Sparkles, CheckCircle } from
 
 export default function ROICalculator({ onEnrollClick }) {
   const [collegeYear, setCollegeYear] = useState('3rd');
-  const [selectedCourseType, setSelectedCourseType] = useState('30day-modeling');
+  const [selectedCourseType, setSelectedCourseType] = useState('aira-online');
 
-  // Skill impact data without salary/LPA numbers
+  // Skill impact data for AIRA 3-Month Program tracks
   const getCalculationData = () => {
     switch (selectedCourseType) {
-      case '30day-modeling':
+      case 'aira-online':
         return {
-          role: 'Investment Banking & Equity Analyst',
-          careerImpact: 'Institutional Valuation & M&A Pitch Books',
-          practicalAdvantage: '3 Live Deal Models for Resume Portfolio',
-          skillMultiplier: '10x Speed',
+          role: 'AIRA Online Career Program (College Track)',
+          careerImpact: 'Practical Commerce Mastery Alongside College Degree',
+          practicalAdvantage: 'Live GST/Tally & Financial Modeling Projects',
+          skillMultiplier: '3-Month Program',
           hiringChance: '96%'
         };
-      case '30day-gst':
+      case 'aira-diploma':
         return {
-          role: 'Corporate Tax Consultant & GST Specialist',
-          careerImpact: 'Government Portal E-Filing & Audit Mastery',
-          practicalAdvantage: 'Independent Client Practice & CA Office Ready',
-          skillMultiplier: '100% Practical',
-          hiringChance: '94%'
+          role: 'AIRA Professional Diploma (Hybrid & Centre Track)',
+          careerImpact: 'Executive Corporate Finance & CFO Mentorship',
+          practicalAdvantage: '1-to-1 Boardroom Pitch Defenses & LBO Decks',
+          skillMultiplier: '3-Month Diploma',
+          hiringChance: '98%'
         };
-      case '30day-tally':
+      case 'aira-lbo':
         return {
-          role: 'Corporate Accountant & MIS Data Analyst',
-          careerImpact: 'Tally Prime Payroll & Dynamic Excel Dashboards',
-          practicalAdvantage: 'Master 20+ Keyboard Speed Shortcuts & Power Query',
-          skillMultiplier: 'Top Speed Analyst',
-          hiringChance: '92%'
+          role: 'AIRA Wall Street LBO & Valuation Track',
+          careerImpact: 'Investment Banking & Equity Analyst Placement Edge',
+          practicalAdvantage: '3 Institutional Valuation Decks for Resume',
+          skillMultiplier: 'High-Yield M&A',
+          hiringChance: '95%'
         };
       default:
         return {
-          role: 'Semester Distinction & Placement Ready',
-          careerImpact: '80%+ University Semester Distinction',
-          practicalAdvantage: '10-Year Question Paper Mastery & Mind Maps',
-          skillMultiplier: '7-Day Sprint',
-          hiringChance: '90%'
+          role: 'AIRA AI Forensic Audit & SEC Filing Lab',
+          careerImpact: 'Big 4 Audit & Corporate Taxation Mastery',
+          practicalAdvantage: 'AI SEC Extraction & Audit Automation',
+          skillMultiplier: '10x Speed',
+          hiringChance: '94%'
         };
     }
   };
@@ -52,18 +52,18 @@ export default function ROICalculator({ onEnrollClick }) {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/40 bg-amber-500/10 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-amber-300">
-            <Calculator size={14} /> STUDENT SKILL MULTIPLIER
+            <Calculator size={14} /> AIRA CAREER MULTIPLIER
           </span>
 
           <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
             Calculate Your Skill & Career Advantage <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-emerald-300 to-cyan-300">
-              Before You Start Your Course
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-200 to-emerald-400">
+              With AIRA 3-Month Program
             </span>
           </h2>
 
           <p className="mt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
-            Investing your time in practical skills isn't an expense — it's the highest yielding skill upgrade of your entire college life.
+            Investing your 3 months in practical AIRA skills isn't an expense — it's the highest yielding career upgrade of your entire commerce journey.
           </p>
         </div>
 
@@ -80,7 +80,7 @@ export default function ROICalculator({ onEnrollClick }) {
             {/* Input 1: College Year */}
             <div className="mb-6">
               <label className="block text-xs font-extrabold uppercase tracking-wider text-slate-300 mb-2">
-                1. What is your current college status?
+                1. What is your current status?
               </label>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                 {[
@@ -104,17 +104,17 @@ export default function ROICalculator({ onEnrollClick }) {
               </div>
             </div>
 
-            {/* Input 2: Selected Course Track */}
+            {/* Input 2: AIRA 3-Month Program Track */}
             <div className="mb-6">
               <label className="block text-xs font-extrabold uppercase tracking-wider text-slate-300 mb-2">
-                2. Which 30-Day or FastTrack Skill do you want?
+                2. Which AIRA 3-Month Program Track do you want?
               </label>
               <div className="space-y-2.5">
                 {[
-                  { id: '30day-modeling', label: '30-Day Wall Street Financial Modeling (IB / PE Track)', badge: 'IB & PE' },
-                  { id: '30day-gst', label: '30-Day Practical GST & Income Tax Masterclass', badge: 'GST & Tax' },
-                  { id: '30day-tally', label: '30-Day Tally Prime + Advanced Corporate Excel', badge: 'Tally & Excel' },
-                  { id: 'fasttrack', label: '7-Day FastTrack Exam Victory / 48-Hr Excel Sprint', badge: 'FastTrack' }
+                  { id: 'aira-online', label: 'AIRA 3-Month Online Career Program (College Track)', badge: 'AIRA Online' },
+                  { id: 'aira-diploma', label: 'AIRA 3-Month Professional Diploma (Centre & Hybrid)', badge: 'AIRA Diploma' },
+                  { id: 'aira-lbo', label: 'AIRA Wall Street LBO & Valuation Accelerator', badge: 'LBO & M&A' },
+                  { id: 'aira-ai', label: 'AIRA AI Forensic Audit & SEC Extractions Lab', badge: 'AI & Audit' }
                 ].map((track) => (
                   <div
                     key={track.id}
@@ -126,7 +126,7 @@ export default function ROICalculator({ onEnrollClick }) {
                     }`}
                   >
                     <span className="text-xs font-bold">{track.label}</span>
-                    <span className="text-[11px] font-extrabold text-amber-300 bg-amber-400/10 px-2 py-1 rounded border border-amber-400/20">
+                    <span className="text-[11px] font-black text-slate-950 bg-amber-400 px-2 py-0.5 rounded shadow-sm">
                       {track.badge}
                     </span>
                   </div>
@@ -136,7 +136,7 @@ export default function ROICalculator({ onEnrollClick }) {
 
             {/* Psychological Callout */}
             <div className="rounded-xl bg-slate-900/80 p-4 border border-slate-800 text-xs text-slate-300 font-medium">
-              💡 <strong className="text-amber-300">College Fact:</strong> Enrolling today equips you with verified portfolio skills that set you apart from 10,000+ competitors in campus interviews.
+              💡 <strong className="text-amber-300">AIRA Advantage:</strong> Enrolling in AIRA equips you with 100% verified live deal portfolios that set you apart from 10,000+ competitors in corporate interviews.
             </div>
 
           </div>

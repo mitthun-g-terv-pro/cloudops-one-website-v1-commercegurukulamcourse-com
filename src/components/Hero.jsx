@@ -108,22 +108,22 @@ export default function Hero({ onApplyClick, onExploreCourses }) {
               <div className={isTextVideoPlaying ? 'hidden' : 'block'}>
                 {/* Subheadline Text */}
                 <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-                  Why do 90% of commerce graduates struggle in entry-level interviews? Because colleges teach outdated 2008 textbooks. <strong className="text-amber-300">Commerce Gurukulam</strong> gives you live corporate mastery in <strong className="text-emerald-300">GST filing, Tally Prime, Excel Financial Modeling & Stock Markets</strong> in just 30 days or FastTrack 7 days!
+                  Why do 90% of commerce graduates struggle in entry-level interviews? Because colleges teach outdated 2008 textbooks. <strong className="text-amber-300">Commerce Gurukulam</strong> gives you live corporate mastery in <strong className="text-emerald-300">GST filing, Tally Prime, Financial Modeling & AI Analytics</strong> through our flagship <span className="bg-gradient-to-r from-amber-300 via-yellow-200 to-emerald-400 text-slate-950 font-extrabold px-2 py-0.5 rounded shadow-sm">AIRA 3-Month Program</span>!
                 </p>
 
                 {/* Value Bullets */}
                 <div className="mt-5 space-y-2.5">
                   <div className="flex items-center gap-3 text-sm text-slate-200 font-medium">
                     <CheckCircle2 size={18} className="text-emerald-400 flex-shrink-0" />
-                    <span><strong className="text-white">100% Practical & Live Portal Access:</strong> File real GST returns & build Excel dashboards.</span>
+                    <span><strong className="text-white">100% Practical & Live Portal Access:</strong> File real GST returns & build deal models.</span>
                   </div>
                   <div className="flex items-center gap-3 text-sm text-slate-200 font-medium">
                     <CheckCircle2 size={18} className="text-emerald-400 flex-shrink-0" />
-                    <span><strong className="text-white">College-Friendly Hours:</strong> Only 1 hour daily — fits perfectly alongside your degree.</span>
+                    <span><strong className="text-white">College-Friendly Schedule:</strong> Online & Hybrid options — fits alongside your degree.</span>
                   </div>
                   <div className="flex items-center gap-3 text-sm text-slate-200 font-medium">
                     <CheckCircle2 size={18} className="text-emerald-400 flex-shrink-0" />
-                    <span><strong className="text-amber-300">100% Fee-Back Guarantee:</strong> Master practical skills or get a 100% refund.</span>
+                    <span><strong className="text-amber-300">100% Guarantee:</strong> Master practical skills or get a full 100% refund.</span>
                   </div>
                 </div>
               </div>
@@ -150,10 +150,10 @@ export default function Hero({ onApplyClick, onExploreCourses }) {
             {/* Call to Action Buttons */}
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
-                href="#courses"
+                href="#aira-program"
                 className="inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-amber-400 via-emerald-400 to-emerald-500 px-8 py-4 text-base font-extrabold text-slate-950 shadow-[0_0_35px_rgba(16,185,129,0.35)] transition hover:scale-105 hover:shadow-[0_0_45px_rgba(245,158,11,0.5)] cursor-pointer"
               >
-                Explore 30-Day Courses <ArrowRight size={20} />
+                Explore AIRA 3-Month Program <ArrowRight size={20} />
               </a>
 
               <button
@@ -292,7 +292,7 @@ export default function Hero({ onApplyClick, onExploreCourses }) {
                   onClick={onApplyClick}
                   className="w-full rounded-xl bg-gradient-to-r from-amber-400 to-emerald-400 py-3 text-xs font-extrabold text-slate-950 uppercase tracking-wider hover:opacity-95 transition"
                 >
-                  Apply For Next 30-Day Batch (7 Seats Left)
+                  Apply For AIRA 3-Month Program (Oct 7 Cohort)
                 </button>
               </div>
 

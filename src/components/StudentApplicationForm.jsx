@@ -8,7 +8,7 @@ export default function StudentApplicationForm({ isOpen, onClose, preselectedCou
     email: '',
     phone: '',
     collegeName: '',
-    courseTrack: preselectedCourse ? preselectedCourse.title : '30-Day Practical GST & Income Tax Masterclass',
+    courseTrack: preselectedCourse ? preselectedCourse.title : 'AIRA 3-Month Online Career Program',
     couponCode: 'COLLEGE70',
     motivation: 'I want to build real practical skills and get high-paid campus placement offers.',
   });
@@ -217,7 +217,7 @@ Commerce Gurukulam`;
 
               <div>
                 <label className="block text-xs font-bold text-slate-300 mb-1 uppercase tracking-wider">
-                  Select 30-Day Course / FastTrack Program <span className="text-amber-400">*</span>
+                  Select AIRA 3-Month Program Track <span className="text-amber-400">*</span>
                 </label>
                 <select
                   name="courseTrack"
@@ -228,11 +228,8 @@ Commerce Gurukulam`;
                 >
                   <option value="AIRA 3-Month Online Career Program">AIRA 3-Month Online Career Program</option>
                   <option value="AIRA 3-Month Professional Diploma (Hybrid & Centre-Based)">AIRA 3-Month Professional Diploma (Hybrid & Centre-Based)</option>
-                  <option value="30-Day Practical GST, Income Tax & E-Filing Masterclass">30-Day Practical GST, Income Tax & E-Filing Masterclass</option>
-                  <option value="30-Day Tally Prime + Advanced Financial Excel Mastery">30-Day Tally Prime + Advanced Excel Mastery</option>
-                  <option value="30-Day Wall Street Financial Modeling & DCF Valuation">30-Day Wall Street Financial Modeling & DCF Valuation</option>
-                  <option value="30-Day Technical Analysis & Stock Market Masterclass">30-Day Stock Market & Options Trading Masterclass</option>
-                  <option value="7-Day FastTrack Corporate Accounting Exam Prep">7-Day FastTrack Semester Exam Prep</option>
+                  <option value="AIRA Wall Street LBO & Valuation Accelerator">AIRA Wall Street LBO & Valuation Accelerator</option>
+                  <option value="AIRA AI Forensic Audit & SEC Extractions Lab">AIRA AI Forensic Audit & SEC Extractions Lab</option>
                 </select>
               </div>
 

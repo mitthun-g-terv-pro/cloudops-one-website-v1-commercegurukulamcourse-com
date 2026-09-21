@@ -21,7 +21,7 @@ export default function CertificateShowcase({ onEnrollClick }) {
             </h2>
 
             <p className="mt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
-              Upon completing any 30-Day Course or FastTrack Sprint, you earn an official, ISO 9001:2015 certified Certificate of Practical Execution equipped with a unique QR verification URL.
+              Upon completing the AIRA 3-Month Program, you earn an official, ISO 9001:2015 certified Certificate of Practical Execution equipped with a unique QR verification URL.
             </p>
 
             <div className="mt-6 space-y-3">
@@ -79,7 +79,7 @@ export default function CertificateShowcase({ onEnrollClick }) {
                 <h3 className="text-2xl font-serif font-black text-white mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-300 to-amber-400">
                   [ Your Full Name ]
                 </h3>
-                <p className="text-xs text-slate-300 mt-2">has successfully completed the intensive 30-Day Practical Program in</p>
+                <p className="text-xs text-slate-300 mt-2">has successfully completed the intensive AIRA 3-Month Program in</p>
                 <p className="text-base font-bold text-emerald-300 mt-1">
                   Practical GST, Income Tax Filing & Advanced Corporate Excel
                 </p>
