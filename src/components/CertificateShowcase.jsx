@@ -4,9 +4,9 @@ export default function CertificateShowcase({ onEnrollClick }) {
   return (
     <section className="relative py-20 bg-[#020916] overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        
+
         <div className="grid lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Left Description */}
           <div className="lg:col-span-6">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/40 bg-amber-500/10 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-amber-300 mb-4">
@@ -53,11 +53,11 @@ export default function CertificateShowcase({ onEnrollClick }) {
           {/* Right Official Certificate Image Display */}
           <div className="lg:col-span-6 relative group">
             <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-amber-500/30 via-emerald-500/30 to-cyan-500/30 blur-2xl opacity-75 group-hover:opacity-100 transition duration-500" />
-            
+
             <div className="relative rounded-3xl border-2 border-amber-400/50 bg-[#061426] p-2 sm:p-3 shadow-[0_0_60px_rgba(245,158,11,0.25)] overflow-hidden transition-all duration-300 hover:scale-[1.02]">
-              <img 
-                src="/aira_official_certificate.jpg" 
-                alt="Commerce Gurukulam AIRA 3-Month Program Official Certificate" 
+              <img
+                src="/aira_official_certificate.jpg"
+                alt="Commerce Gurukulam AIRA 3-Month Program Official Certificate"
                 className="w-full h-auto rounded-2xl object-cover shadow-2xl"
               />
               <div className="absolute bottom-4 right-4 bg-slate-950/85 backdrop-blur-md border border-amber-400/40 text-amber-300 text-[10px] font-extrabold px-3 py-1 rounded-full shadow-lg flex items-center gap-1.5">
