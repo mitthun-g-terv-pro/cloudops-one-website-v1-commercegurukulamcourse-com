@@ -50,60 +50,19 @@ export default function CertificateShowcase({ onEnrollClick }) {
 
           </div>
 
-          {/* Right Certificate Graphic Mockup */}
-          <div className="lg:col-span-6 relative">
-            <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-amber-500/20 to-emerald-500/20 blur-2xl opacity-60" />
+          {/* Right Official Certificate Image Display */}
+          <div className="lg:col-span-6 relative group">
+            <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-amber-500/30 via-emerald-500/30 to-cyan-500/30 blur-2xl opacity-75 group-hover:opacity-100 transition duration-500" />
             
-            <div className="relative rounded-3xl border-2 border-amber-400/40 bg-[#061426] p-6 sm:p-8 shadow-2xl">
-              
-              {/* Top Certificate Branding */}
-              <div className="flex items-center justify-between pb-6 border-b border-amber-400/20">
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-xl bg-amber-400/20 border border-amber-400/40 flex items-center justify-center font-black text-amber-300 text-lg font-serif">
-                    CG
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-extrabold uppercase tracking-widest text-amber-300 font-serif">COMMERCE GURUKULAM</h4>
-                    <p className="text-[10px] text-slate-400 font-bold uppercase">ISO 9001:2015 CERTIFIED ACADEMY</p>
-                  </div>
-                </div>
-                <div className="rounded-full bg-emerald-500/20 border border-emerald-400/40 px-3 py-1 text-[10px] font-extrabold text-emerald-300">
-                  VERIFIED CREDENTIAL
-                </div>
+            <div className="relative rounded-3xl border-2 border-amber-400/50 bg-[#061426] p-2 sm:p-3 shadow-[0_0_60px_rgba(245,158,11,0.25)] overflow-hidden transition-all duration-300 hover:scale-[1.02]">
+              <img 
+                src="/aira_official_certificate.jpg" 
+                alt="Commerce Gurukulam AIRA 3-Month Program Official Certificate" 
+                className="w-full h-auto rounded-2xl object-cover shadow-2xl"
+              />
+              <div className="absolute bottom-4 right-4 bg-slate-950/85 backdrop-blur-md border border-amber-400/40 text-amber-300 text-[10px] font-extrabold px-3 py-1 rounded-full shadow-lg flex items-center gap-1.5">
+                <Sparkles size={12} className="text-emerald-400" /> OFFICIAL VERIFIED CREDENTIAL
               </div>
-
-              {/* Certificate Body */}
-              <div className="py-6 text-center">
-                <p className="text-xs font-semibold uppercase tracking-widest text-slate-400">CERTIFICATE OF PRACTICAL MASTERY</p>
-                <p className="text-xs text-slate-300 mt-2">This is to certify that</p>
-                <h3 className="text-2xl font-serif font-black text-white mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-300 to-amber-400">
-                  [ Your Full Name ]
-                </h3>
-                <p className="text-xs text-slate-300 mt-2">has successfully completed the intensive AIRA 3-Month Program in</p>
-                <p className="text-base font-bold text-emerald-300 mt-1">
-                  Practical GST, Income Tax Filing & Advanced Corporate Excel
-                </p>
-                <p className="text-[11px] text-slate-400 mt-3 max-w-md mx-auto">
-                  Demonstrated hands-on competence in live GSTR-3B portal reconciliation, 3-statement financial modeling, and corporate balance sheet finalization.
-                </p>
-              </div>
-
-              {/* Certificate Footer */}
-              <div className="pt-6 border-t border-amber-400/20 flex items-center justify-between">
-                <div className="text-left">
-                  <p className="text-[10px] text-slate-400 font-bold uppercase">ISSUED BY</p>
-                  <p className="text-xs font-bold text-slate-200">Director of Academic & Skill Board</p>
-                </div>
-
-                <div className="flex items-center gap-2 bg-slate-900 p-2 rounded-xl border border-slate-800">
-                  <QrCode size={28} className="text-amber-300" />
-                  <div className="text-[9px] text-slate-400 text-left">
-                    <p className="font-extrabold text-white">SCAN TO VERIFY</p>
-                    <p>ID: CG-2026-9842</p>
-                  </div>
-                </div>
-              </div>
-
             </div>
           </div>
 
