@@ -22,25 +22,37 @@ export const alertTickerMessages = [
 ];
 
 export const megaComboSkills = [
-  // 1. ACCOUNTING & TAXATION (MONTH 1)
-  { id: 1, name: 'Accounting Fundamentals', icon: 'BookMarked', category: 'AIRA MONTH 1', desc: 'Core debit/credit principles, journal posting, ledger & trial balance finalization' },
-  { id: 2, name: 'Financial Statement Analysis', icon: 'FileText', category: 'AIRA MONTH 1', desc: 'Balance Sheet, P&L, Cash Flow analysis & key corporate performance ratios' },
-  { id: 3, name: 'Tally Prime + Corporate Payroll', icon: 'Building', category: 'AIRA MONTH 1', desc: 'Company setup, inventory vouchers, GST reconciliation & corporate payroll management' },
-  { id: 4, name: 'Live GST & Income Tax Filing', icon: 'ShieldAlert', category: 'AIRA MONTH 1', desc: 'GSTR-1, 3B, 2B recon, ITR-1 to 4 portal filing, TDS/TCS rules & audit readiness' },
+  // ACCOUNTING
+  { id: 1, name: 'Accounting Fundamentals', icon: 'BookMarked', category: 'ACCOUNTING', desc: 'Core debit/credit principles, journal posting, ledger & trial balance finalization' },
+  { id: 2, name: 'Financial Statement Analysis', icon: 'FileText', category: 'ACCOUNTING', desc: 'Balance Sheet, P&L, Cash Flow analysis & key corporate performance ratios' },
+  { id: 3, name: 'Tally Prime + Payroll', icon: 'Building', category: 'ACCOUNTING', desc: 'Company setup, inventory vouchers, GST reconciliation & corporate payroll management' },
+  { id: 4, name: 'Accounting Compliances', icon: 'ShieldAlert', category: 'ACCOUNTING', desc: 'GSTR-1, 3B, 2B recon, ITR-1 to 4 portal filing, TDS/TCS rules & audit readiness' },
 
-  // 2. FINANCIAL MODELING & VALUATION (MONTH 2)
-  { id: 5, name: 'Working Capital & Liquidity', icon: 'Landmark', category: 'AIRA MONTH 2', desc: 'Operating cycles, cash flow optimization & corporate inventory liquidity management' },
-  { id: 6, name: 'Capital Structure & WACC', icon: 'PieChart', category: 'AIRA MONTH 2', desc: 'Cost of capital, debt vs equity mix, WACC & capital expenditure budgeting' },
-  { id: 7, name: '3-Statement Financial Modeling', icon: 'TrendingUp', category: 'AIRA MONTH 2', desc: '3-Statement integrated financial forecasting & dynamic scenario modeling' },
-  { id: 8, name: 'DCF Intrinsic Valuation', icon: 'TrendingUp', category: 'AIRA MONTH 2', desc: 'FCFF math, WACC calculation, terminal value & DCF intrinsic valuation' },
-  { id: 9, name: 'Wall Street M&A & LBO Deals', icon: 'Building', category: 'AIRA MONTH 2', desc: 'M&A deal structuring, precedent transactions, LBO waterfalls & institutional pitch books' },
+  // FINANCE
+  { id: 5, name: 'Working Capital Management', icon: 'Landmark', category: 'FINANCE', desc: 'Operating cycles, cash flow optimization & corporate inventory liquidity management' },
+  { id: 6, name: 'Capital Structure + Budgeting', icon: 'PieChart', category: 'FINANCE', desc: 'Cost of capital, debt vs equity mix, WACC & capital expenditure budgeting' },
+  { id: 7, name: 'Financial Modelling Foundation', icon: 'TrendingUp', category: 'FINANCE', desc: '3-Statement integrated financial forecasting & dynamic scenario modeling' },
 
-  // 3. AI & AUDIT ANALYTICS (MONTH 3)
-  { id: 10, name: 'AI Finance Prompt Engineering', icon: 'Bot', category: 'AIRA MONTH 3', desc: 'Custom prompt engineering for SEC filings, annual report audits & rapid synthesis' },
-  { id: 11, name: 'AI Forensic Audit & SEC Extraction', icon: 'Sparkles', category: 'AIRA MONTH 3', desc: 'Next-gen AI tools for automated financial reporting & corporate fraud detection' },
-  { id: 12, name: 'Advanced Excel & Power Query', icon: 'Table', category: 'AIRA MONTH 3', desc: 'XLOOKUP, INDEX-MATCH, Power Query automation & speed keyboard shortcuts' },
-  { id: 13, name: 'Power BI Executive Dashboards', icon: 'BarChart3', category: 'AIRA MONTH 3', desc: 'Interactive data visualization, DAX measures & executive KPI dashboards' },
-  { id: 14, name: 'Mock Interviews & Boardroom Pitch', icon: 'Award', category: 'CAREER ACCELERATOR', desc: '1-on-1 technical mock interviews, boardroom pitch defense & resume portfolio building' }
+  // VALUATION
+  { id: 8, name: 'Investment Banking Fundamentals', icon: 'Building', category: 'VALUATION', desc: 'M&A deal structuring, precedent transactions, LBO waterfalls & institutional pitch books' },
+  { id: 9, name: 'IPO Fundamentals', icon: 'Zap', category: 'VALUATION', desc: 'IPO process, prospectus drafting, pricing mechanics & underwriting fundamentals' },
+  { id: 10, name: 'Discounted Cash Flow Analysis (DCF) Modelling', icon: 'TrendingUp', category: 'VALUATION', desc: 'FCFF math, WACC calculation, terminal value & DCF intrinsic valuation' },
+
+  // FUTURE SKILLS
+  { id: 11, name: 'AI Tools', icon: 'Bot', category: 'FUTURE SKILLS', desc: 'Next-gen AI tools for automated financial reporting & corporate fraud detection' },
+  { id: 12, name: 'AI Finance Prompting', icon: 'Sparkles', category: 'FUTURE SKILLS', desc: 'Custom prompt engineering for SEC filings, annual report audits & rapid synthesis' },
+
+  // CAPITAL MARKET
+  { id: 13, name: 'Financial Markets Foundation', icon: 'TrendingUp', category: 'CAPITAL MARKET', desc: 'Equity, fixed income, money markets & macroeconomic indicators' },
+  { id: 14, name: 'Regulation & Compliance', icon: 'ShieldAlert', category: 'CAPITAL MARKET', desc: 'SEBI guidelines, insider trading regulations & compliance frameworks' },
+
+  // ANALYTICS
+  { id: 15, name: 'Advanced Excel + Query', icon: 'Table', category: 'ANALYTICS', desc: 'XLOOKUP, INDEX-MATCH, Power Query automation & speed keyboard shortcuts' },
+  { id: 16, name: 'Power BI + Dashboard', icon: 'BarChart3', category: 'ANALYTICS', desc: 'Interactive data visualization, DAX measures & executive KPI dashboards' },
+
+  // INTERVIEWS / CAREER PREPARATION
+  { id: 17, name: 'Mock Interviews', icon: 'Award', category: 'INTERVIEWS / CAREER PREPARATION', desc: '1-on-1 technical mock interviews & boardroom pitch defense' },
+  { id: 18, name: 'Interview Preparation (Practical)', icon: 'Award', category: 'INTERVIEWS / CAREER PREPARATION', desc: 'Practical resume portfolio building, corporate case studies & interview readiness' }
 ];
 
 export const mindTriggers = [
@@ -231,7 +243,7 @@ export const courses = [
 export const megaComboData = {
   title: 'AIRA 3-Month All-Access Executive Bundle',
   subtitle: 'The Complete 3-Month Industry Skill Mastery Program for Commerce Students & Graduates',
-  totalCoursesCount: 14,
+  totalCoursesCount: 18,
   description: 'Get complete 3-Month access to all Month 1 (GST & Tax), Month 2 (Financial Modeling & Valuation), and Month 3 (AI & Audit Analytics) modules in one unified enrollment.',
   highlights: [
     'Complete Access to AIRA 3-Month Online & Professional Diploma Modules',
