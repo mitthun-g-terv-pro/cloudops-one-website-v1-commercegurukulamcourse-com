@@ -87,7 +87,7 @@ export default function FastTrackBanner({ onEnrollClick }) {
               <div className="flex items-center gap-3">
                 <Calendar size={24} className="text-amber-400 shrink-0" />
                 <div>
-                  <h4 className="text-xs font-extrabold uppercase text-white tracking-wider">NEXT COHORT LAUNCH: OCTOBER 7</h4>
+                  <h4 className="text-xs font-extrabold uppercase text-white tracking-wider">NEXT COHORT LAUNCH: OCTOBER 15</h4>
                   <p className="text-xs text-slate-300">Early Bird Offer Valid Until <strong className="text-amber-300">September 30</strong> • Choose Online or Professional Diploma Track</p>
                 </div>
               </div>

@@ -45,7 +45,7 @@ function App() {
           }}
         />
 
-        {/* October 7 Cohort Launch & Early Bird Announcement Banner */}
+        {/* October 15 Cohort Launch & Early Bird Announcement Banner */}
         <CohortLaunchBanner onEnrollClick={() => handleOpenEnrollment()} />
 
         {/* 12-in-1 Mega Commerce Combo Section (Inspired by GT Learning Poster) */}

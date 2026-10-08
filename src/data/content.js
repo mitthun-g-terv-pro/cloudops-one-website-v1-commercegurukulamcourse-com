@@ -15,10 +15,10 @@ export const heroStats = [
 ];
 
 export const alertTickerMessages = [
-  "🔥 Course Launch: October 7 | Early Bird Offer Valid Until September 30 — Save Big With Code 'COLLEGE70'",
+  "🔥 Course Launch: October 15 | Early Bird Offer Valid Until September 30 — Save Big With Code 'COLLEGE70'",
   "⚡ 94% of Commerce Graduates fail practical GST interview rounds — Master AIRA 3-Month Program!",
   "🎓 Joined by students from SRCC, Christ University, St. Xavier's, Loyola, Hindu College & 180+ institutions!",
-  "🚀 AIRA 3-Month Online & Professional Diploma Cohorts Launching October 7!"
+  "🚀 AIRA 3-Month Online & Professional Diploma Cohorts Launching October 15!"
 ];
 
 export const megaComboSkills = [
@@ -276,7 +276,7 @@ export const faqs = [
     answer: 'We are so confident in AIRA’s practical outcome that if you complete the first 14 days of the program and feel it hasn’t upgraded your practical skills, we offer a 100% money-back guarantee.'
   },
   {
-    question: 'How do I apply for the October 7 AIRA Early Bird Grant?',
+    question: 'How do I apply for the October 15 AIRA Early Bird Grant?',
     answer: 'Simply click "Enroll Now" or "Claim Student Access Grant", select your college status in the application form, and apply the Early Bird code COLLEGE70 before September 30!'
   }
 ];

@@ -292,7 +292,7 @@ export default function Hero({ onApplyClick, onExploreCourses }) {
                   onClick={onApplyClick}
                   className="w-full rounded-xl bg-gradient-to-r from-amber-400 to-emerald-400 py-3 text-xs font-extrabold text-slate-950 uppercase tracking-wider hover:opacity-95 transition"
                 >
-                  Apply For AIRA 3-Month Program (Oct 7 Cohort)
+                  Apply For AIRA 3-Month Program (Oct 15 Cohort)
                 </button>
               </div>
 

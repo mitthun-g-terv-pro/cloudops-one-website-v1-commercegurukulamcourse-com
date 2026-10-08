@@ -10,8 +10,8 @@ export default function CohortLaunchBanner({ onEnrollClick }) {
   });
 
   useEffect(() => {
-    // Target date: October 7, 2026
-    const targetDate = new Date('2026-10-07T09:00:00+05:30').getTime();
+    // Target date: October 15, 2026
+    const targetDate = new Date('2026-10-15T09:00:00+05:30').getTime();
 
     const updateTimer = () => {
       const now = new Date().getTime();
@@ -65,7 +65,7 @@ export default function CohortLaunchBanner({ onEnrollClick }) {
         {/* Section Title & Subtitle */}
         <div className="text-center max-w-3xl mx-auto mb-6">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white leading-tight">
-            Your Commerce Career Starts <span className="bg-gradient-to-r from-amber-300 via-yellow-200 to-emerald-400 bg-clip-text text-transparent">October 7</span>
+            Your Commerce Career Starts <span className="bg-gradient-to-r from-amber-300 via-yellow-200 to-emerald-400 bg-clip-text text-transparent">October 15</span>
           </h2>
           <p className="mt-3 text-base sm:text-lg font-bold text-slate-200 flex items-center justify-center gap-2 flex-wrap">
             <span>3 Months of Industry-Focused Learning with</span>
@@ -78,7 +78,7 @@ export default function CohortLaunchBanner({ onEnrollClick }) {
         {/* Real-time Live Countdown Timer */}
         <div className="flex flex-col items-center justify-center mb-10">
           <div className="flex items-center gap-1.5 text-[11px] font-black uppercase tracking-widest text-amber-300 mb-3 bg-amber-400/10 border border-amber-400/30 px-3.5 py-1 rounded-full shadow-sm">
-            <Timer size={14} className="text-amber-400 animate-spin" /> Live Countdown to Oct 7 Course Launch
+            <Timer size={14} className="text-amber-400 animate-spin" /> Live Countdown to Oct 15 Course Launch
           </div>
           
           <div className="grid grid-cols-4 gap-2.5 sm:gap-4 text-center max-w-md sm:max-w-lg w-full">
@@ -138,7 +138,7 @@ export default function CohortLaunchBanner({ onEnrollClick }) {
                   Course Launch
                 </span>
                 <h3 className="text-lg font-black text-slate-100 mt-2">
-                  October 7, 2026
+                  October 15, 2026
                 </h3>
                 <p className="text-xs text-slate-400 mt-1 leading-relaxed">
                   Interactive live deal room sessions & hands-on practical execution.
